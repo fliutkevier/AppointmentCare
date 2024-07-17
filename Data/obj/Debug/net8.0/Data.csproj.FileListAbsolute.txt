@@ -13,5 +13,3 @@ C:\Programming\AsignaTurns2.0\AppointmentCare\Data\obj\Debug\net8.0\Data.dll
 C:\Programming\AsignaTurns2.0\AppointmentCare\Data\obj\Debug\net8.0\refint\Data.dll
 C:\Programming\AsignaTurns2.0\AppointmentCare\Data\obj\Debug\net8.0\Data.pdb
 C:\Programming\AsignaTurns2.0\AppointmentCare\Data\obj\Debug\net8.0\ref\Data.dll
-C:\Programming\AsignaTurns2.0\AppointmentCare\Data\bin\Debug\net8.0\Data.runtimeconfig.json
-C:\Programming\AsignaTurns2.0\AppointmentCare\Data\obj\Debug\net8.0\Data.genruntimeconfig.cache

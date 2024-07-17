@@ -1,15 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Domain
 {
-    public class Patient
+    public class Patient : Person
     {
-        public int PersonId { get; set; }
-        public int HealthInsuranceId { get; set; }
-        public int HealthInsuranceNumber { get; set; }
+        public int Id { get; set; }
+        [DisplayName("Obra Social")]
+        public virtual HealthInsurance HealthInsurance { get; set; } = null!;
+        [DisplayName("Numero de Obra Social")]
+        public string HealthInsuranceNumber { get; set; } = null!;
     }
 }

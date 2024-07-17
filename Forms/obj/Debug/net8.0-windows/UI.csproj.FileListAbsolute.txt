@@ -22,7 +22,6 @@ C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\Mic
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.dll
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Memory.dll
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
@@ -48,8 +47,6 @@ C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\Mic
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\System.IdentityModel.Tokens.Jwt.dll
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\System.Memory.Data.dll
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\System.Runtime.Caching.dll
-C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
-C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
@@ -60,7 +57,6 @@ C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\run
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\runtimes\win-x64\native\WebView2Loader.dll
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\runtimes\win-x86\native\WebView2Loader.dll
-C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\Business.dll
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\Data.dll
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\Domain.dll
@@ -136,3 +132,17 @@ C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\tr\
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\UI.dll.config
+C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\System.ClientModel.dll
+C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\de\Microsoft.Data.SqlClient.resources.dll
+C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\es\Microsoft.Data.SqlClient.resources.dll
+C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\it\Microsoft.Data.SqlClient.resources.dll
+C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\runtimes\unix\lib\net8.0\Microsoft.Data.SqlClient.dll
+C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\Microsoft.Data.SqlClient.dll
+C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Runtime.Caching.dll

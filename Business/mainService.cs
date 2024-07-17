@@ -9,10 +9,9 @@ namespace Business
 {
     public class mainService
     {
-        protected readonly AppCareDbContext _context;
         public mainService()
         {
-            _context = new AppCareDbContext();
+
         }
     }
 }

@@ -8,18 +8,7 @@ namespace Domain
 {
     public class HealthInsurance
     {
-        private int _id;
-        private string _provider;
-
-        public int Id
-        {
-            get { return _id; }
-            set { _id = value; }
-        }
-        public string Provider
-        {
-            get { return _provider; }
-            set { _provider = value; }
-        }
+        public int Id { get; set; }
+        public string Provider { get; set; } = null!;
     }
 }
