@@ -4,6 +4,9 @@
     <Compile Update="adminFrm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmAddAndMod.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="mainForm.cs">
       <SubType>Form</SubType>
     </Compile>

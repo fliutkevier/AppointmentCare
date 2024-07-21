@@ -146,3 +146,4 @@ C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\zh-
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\runtimes\unix\lib\net8.0\Microsoft.Data.SqlClient.dll
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\Microsoft.Data.SqlClient.dll
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Runtime.Caching.dll
+C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\obj\Debug\net8.0-windows\UI.frmAddAndMod.resources

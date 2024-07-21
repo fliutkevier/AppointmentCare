@@ -10,5 +10,10 @@ namespace Domain
     {
         public int Id { get; set; }
         public string Provider { get; set; } = null!;
+
+        public override string ToString()
+        {
+            return Provider;
+        }
     }
 }

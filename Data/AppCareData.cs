@@ -13,7 +13,7 @@ namespace Data
     {
         private SqlConnection _connection;
         private SqlCommand _command;
-        private SqlDataReader _reader;
+        private SqlDataReader _reader = null!;
         public SqlDataReader Reader
         {
             get { return _reader; }
@@ -57,10 +57,37 @@ namespace Data
             
         }
 
-        public void setParammeter(string parameter, object value)
+        public bool ExecAction()
+        {
+            _command.Connection = _connection;
+            try
+            {
+                Open();
+                if(_command.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public void SetParammeter(string parameter, object value)
         {
             _command.Parameters.AddWithValue(parameter, value);
         }
 
+        public void Close()
+        {
+            _connection.Close();
+        }
+        
     }
 }

@@ -9,7 +9,6 @@ namespace Domain
 {
     public class Patient : Person
     {
-        public int Id { get; set; }
         [DisplayName("Obra Social")]
         public virtual HealthInsurance HealthInsurance { get; set; } = null!;
         [DisplayName("Numero de Obra Social")]

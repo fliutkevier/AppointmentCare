@@ -17,12 +17,12 @@ namespace Domain
         [DisplayName("Apellido")]
         public string Lastname { get; set; } = null!;
         [DisplayName("DNI")]
-        public int Dni { get; set; }
+        public string Dni { get; set; } = null!;
         [DisplayName("Dirección")]
         public string Address { get; set; } = null!;
         [DisplayName("Telefono")]
         public string Phone { get; set; } = null!;
         [DisplayName("Fecha de Nacimiento")]
-        public DateTime BirthDay { get; set; }
+        public DateOnly BirthDay { get; set; }
     }
 }
