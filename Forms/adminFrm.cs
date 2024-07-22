@@ -14,6 +14,7 @@ namespace UI
 {
     public partial class adminFrm : Form
     {
+        private Patient patient;
         public adminFrm()
         {
             InitializeComponent();
@@ -24,7 +25,8 @@ namespace UI
             PatientService patService = new PatientService();
             var lstPatients = patService.getAllPatients();
             dgvPatients.DataSource = lstPatients;
-            dgvPatients.Columns["Id"].Visible = false;
+            dgvPatients.Columns["IdPatient"].Visible = false;
+            dgvPatients.Columns["IdPerson"].Visible = false;
             dgvPatients.Columns["HealthInsurance"].DisplayIndex = 5;
             dgvPatients.Columns["HealthInsuranceNumber"].DisplayIndex = 5;
         }
@@ -54,12 +56,29 @@ namespace UI
 
         private void btnModifyPatient_Click(object sender, EventArgs e)
         {
-            Patient patModify = new Patient();
-            patModify = (Patient)dgvPatients.CurrentRow.DataBoundItem;
+            patient = (Patient)dgvPatients.CurrentRow.DataBoundItem;
 
-            frmAddAndMod frmAdd = new frmAddAndMod(true, patModify);
+            frmAddAndMod frmAdd = new frmAddAndMod(true, patient);
             frmAdd.ShowDialog();
             loadPatients();
+        }
+
+        private void btnDeletePatient_Click(object sender, EventArgs e)
+        {
+            patient = (Patient)dgvPatients.CurrentRow.DataBoundItem;
+            PatientService patientService = new PatientService();
+            DialogResult yesOrNo = MessageBox.Show("¿Está seguro que desea eliminar este paciente?", "ELIMINACIÓN...", MessageBoxButtons.YesNo);
+            if (yesOrNo == DialogResult.Yes)
+            {
+                if (patientService.Delete(patient))
+                {
+                    MessageBox.Show("Paciente eliminado.");
+                }
+                else
+                {
+                    MessageBox.Show("No fue posible eliminar este paciente.");
+                }
+            }
         }
     }
 }

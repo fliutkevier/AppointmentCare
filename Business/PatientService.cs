@@ -17,13 +17,14 @@ namespace Business
 			List<Patient> patients = new List<Patient>();
 			try
 			{
-				_context.SetQuery("SELECT Per.Id, Name, Lastname, DNI, H.Provider, Pat.HealthInsuranceNumber, Address, Phone, Birthday FROM Persons Per, Patients Pat, HealthInsurances H WHERE Per.Id = Pat.PersonId AND Pat.HealthInsuranceId = H.Id");
+				_context.SetQuery("SELECT Per.Id, Pat.Id AS IdPatient, Name, Lastname, DNI, H.Provider, Pat.HealthInsuranceNumber, Address, Phone, Birthday FROM Persons Per, Patients Pat, HealthInsurances H WHERE Per.Id = Pat.PersonId AND Pat.HealthInsuranceId = H.Id");
 				_context.ExecRead();
 
 				while (_context.Reader.Read())
 				{
                     Patient patient = new Patient();
-                    patient.Id = (int)_context.Reader["Id"];
+                    patient.IdPerson = (int)_context.Reader["Id"];
+                    patient.IdPatient = (int)_context.Reader["IdPatient"];
 					patient.Name = (string)_context.Reader["Name"];
 					patient.Lastname = (string)_context.Reader["Lastname"];
 					patient.Dni = (string)_context.Reader["DNI"];
@@ -65,14 +66,14 @@ namespace Business
 				if(_context.ExecAction())
 				{
 					PersonService perServ = new PersonService();
-					objPat.Id = perServ.GetIdByDni(objPat.Dni);
+					objPat.IdPerson = perServ.GetIdByDni(objPat.Dni);
 					_context.Close();
-					if(objPat.Id == -1)
+					if(objPat.IdPerson == -1)
 					{
 						return false;
 					}
-                    _context.SetQuery("INSERT INTO Patients VALUES (@PatientId, @HealthInsurance, @HealthInsuranceNumber)");
-                    _context.SetParammeter("@PatientId", objPat.Id);
+                    _context.SetQuery("INSERT INTO Patients VALUES (@PersonId, @HealthInsurance, @HealthInsuranceNumber)");
+                    _context.SetParammeter("@PersonId", objPat.IdPerson);
                     _context.SetParammeter("@HealthInsurance", objPat.HealthInsurance.Id);
                     _context.SetParammeter("@HealthInsuranceNumber", objPat.HealthInsuranceNumber);
                     if(_context.ExecAction())
@@ -99,22 +100,22 @@ namespace Business
 		{
 			try
 			{
-                _context.SetQuery("");
+                _context.SetQuery("UPDATE Persons SET Name = @Name, Lastname = @Lastname, DNI = @Dni, Address = @Address, Phone = @Phone, Birthday = @Birthday WHERE Id = @Id");
                 _context.SetParammeter("@Name", objPat.Name);
                 _context.SetParammeter("@Lastname", objPat.Lastname);
                 _context.SetParammeter("@Dni", objPat.Dni);
                 _context.SetParammeter("@Address", objPat.Address);
                 _context.SetParammeter("@Phone", objPat.Phone);
                 _context.SetParammeter("@Birthday", objPat.BirthDay);
+                _context.SetParammeter("@Id", objPat.IdPerson);
 
                 if (_context.ExecAction())
                 {
-                    PersonService perServ = new PersonService();
                     _context.Close();
-                    _context.SetQuery("");
-                    _context.SetParammeter("@PatientId", objPat.Id);
+                    _context.SetQuery("UPDATE Patients SET HealthInsuranceId = @HealthInsurance, HealthInsuranceNumber = @HealthInsuranceNumber WHERE Id = @IdPatient");
                     _context.SetParammeter("@HealthInsurance", objPat.HealthInsurance.Id);
                     _context.SetParammeter("@HealthInsuranceNumber", objPat.HealthInsuranceNumber);
+                    _context.SetParammeter("@IdPatient", objPat.IdPatient);
                     if (_context.ExecAction())
                     {
                         _context.Close();
@@ -131,5 +132,33 @@ namespace Business
 			}
 			finally { _context.Close(); }
 		}
+
+		public bool Delete(Patient objPat)
+		{
+            try
+            {
+                _context.SetQuery("DELETE FROM Patients WHERE Id = @IdPatient");
+                _context.SetParammeter("@IdPatient", objPat.IdPatient);
+
+                if (_context.ExecAction())
+                {
+                    _context.Close();
+                    _context.SetQuery("DELETE FROM Persons WHERE Id = @IdPerson");
+                    _context.SetParammeter("@IdPerson", objPat.IdPerson);
+                    if (_context.ExecAction())
+                    {
+                        _context.Close();
+                        return true;
+                    }
+                }
+
+                return false;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally { _context.Close(); }
+        }
     }
 }

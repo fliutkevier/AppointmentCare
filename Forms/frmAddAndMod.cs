@@ -15,7 +15,7 @@ namespace UI
     public partial class frmAddAndMod : Form
     {
         private bool isModifying;
-        private Patient patCharged = null!;
+        private Patient patient = null!;
         public frmAddAndMod()
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace UI
 
         public frmAddAndMod(bool isModifying, Patient patientCharged)
         {
-            patCharged = patientCharged;
+            patient = patientCharged;
             this.isModifying = isModifying;
             InitializeComponent();
         }
@@ -45,18 +45,18 @@ namespace UI
 
                 throw;
             }
-            if (isModifying)
+            if (patient.IdPerson > 0)
             {
                 lblTitle.Text = "Modificando";
                 Text = "Modificando...";
-                tbxName.Text = patCharged.Name;
-                tbxLastname.Text = patCharged.Lastname;
-                tbxDni.Text = patCharged.Dni;
-                tbxAddress.Text = patCharged.Address;
-                tbxHealthInsuranceNumber.Text = patCharged.HealthInsuranceNumber;
-                tbxPhone.Text = patCharged.Phone;
-                dtpBirthday.Value = patCharged.BirthDay.ToDateTime(TimeOnly.MinValue);
-                cbxHealthInsurance.SelectedItem = patCharged.HealthInsurance.Id;
+                tbxName.Text = patient.Name;
+                tbxLastname.Text = patient.Lastname;
+                tbxDni.Text = patient.Dni;
+                tbxAddress.Text = patient.Address;
+                tbxHealthInsuranceNumber.Text = patient.HealthInsuranceNumber;
+                tbxPhone.Text = patient.Phone;
+                dtpBirthday.Value = patient.BirthDay.ToDateTime(TimeOnly.MinValue);
+                cbxHealthInsurance.SelectedItem = patient.HealthInsurance.Id;
             }
         }
 
@@ -68,30 +68,34 @@ namespace UI
                 MessageBox.Show("Dni invalido.", "ERROR", MessageBoxButtons.OK);
             }
 
-            Patient pat = new Patient();
-            pat.Name = tbxName.Text;
-            pat.Lastname = tbxLastname.Text;
-            pat.Dni = tbxDni.Text;
-            pat.Address = tbxAddress.Text;
-            pat.Phone = tbxPhone.Text;
-            pat.BirthDay = DateOnly.FromDateTime(dtpBirthday.Value);
-            pat.HealthInsurance = (HealthInsurance)cbxHealthInsurance.SelectedItem;
-            pat.HealthInsuranceNumber = tbxHealthInsuranceNumber.Text;
+            if (patient.IdPerson <= 0)
+            {
+                patient = new Patient();
+            }
+
+            patient.Name = tbxName.Text;
+            patient.Lastname = tbxLastname.Text;
+            patient.Dni = tbxDni.Text;
+            patient.Address = tbxAddress.Text;
+            patient.Phone = tbxPhone.Text;
+            patient.BirthDay = DateOnly.FromDateTime(dtpBirthday.Value);
+            patient.HealthInsurance = (HealthInsurance)cbxHealthInsurance.SelectedItem;
+            patient.HealthInsuranceNumber = tbxHealthInsuranceNumber.Text;
 
             PatientService patService = new PatientService();
             if (isModifying)
             {
-                if (patService.ModifyPatient(pat))
+                if (patService.ModifyPatient(patient))
                 {
                     MessageBox.Show("Paciente modificado con exito.");
                     Close();
                 }
                 else
                 {
-                    MessageBox.Show("No se pudo cargar el paciente, revise bien los datos cargados");
+                    MessageBox.Show("No se pudo modificar al paciente, revise bien los datos cargados.");
                 }
             }
-            if (patService.addPatient(pat))
+            else if (patService.addPatient(patient))
             {
                 MessageBox.Show("Paciente cargado con exito.");
                 Close();

@@ -9,9 +9,17 @@ namespace Domain
 {
     public class Patient : Person
     {
+        public int IdPatient { get; set; }
         [DisplayName("Obra Social")]
-        public virtual HealthInsurance HealthInsurance { get; set; } = null!;
+        public virtual HealthInsurance HealthInsurance { get; set; }
         [DisplayName("Numero de Obra Social")]
-        public string HealthInsuranceNumber { get; set; } = null!;
+        public string HealthInsuranceNumber { get; set; }
+
+        public Patient()
+        {
+            IdPatient = 0;
+            HealthInsurance = new HealthInsurance();
+            HealthInsuranceNumber = string.Empty;
+        }
     }
 }

@@ -9,7 +9,13 @@ namespace Domain
     public class HealthInsurance
     {
         public int Id { get; set; }
-        public string Provider { get; set; } = null!;
+        public string Provider { get; set; }
+
+        public HealthInsurance()
+        {
+            Id = 0;
+            Provider = string.Empty;
+        }
 
         public override string ToString()
         {

@@ -75,6 +75,7 @@
             btnDeletePatient.TabIndex = 3;
             btnDeletePatient.Text = "ELIMINAR";
             btnDeletePatient.UseVisualStyleBackColor = true;
+            btnDeletePatient.Click += btnDeletePatient_Click;
             // 
             // btnModifyPatient
             // 

@@ -9,3 +9,4 @@ C:\Programming\AsignaTurns2.0\AppointmentCare\Domain\obj\Debug\net8.0\Domain.dll
 C:\Programming\AsignaTurns2.0\AppointmentCare\Domain\obj\Debug\net8.0\refint\Domain.dll
 C:\Programming\AsignaTurns2.0\AppointmentCare\Domain\obj\Debug\net8.0\Domain.pdb
 C:\Programming\AsignaTurns2.0\AppointmentCare\Domain\obj\Debug\net8.0\ref\Domain.dll
+C:\Programming\AsignaTurns2.0\AppointmentCare\Domain\obj\Debug\net8.0\Domain.sourcelink.json

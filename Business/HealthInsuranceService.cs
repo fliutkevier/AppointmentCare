@@ -32,7 +32,7 @@ namespace Business
 
                 return insurances;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                 throw;

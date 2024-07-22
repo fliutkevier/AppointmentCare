@@ -23,7 +23,7 @@ namespace Business
                 while (_context.Reader.Read())
                 {
                     Person per = new Person();
-                    per.Id = (int)_context.Reader["Id"];
+                    per.IdPerson = (int)_context.Reader["Id"];
                     per.Name = (string)_context.Reader["Name"];
                     per.Lastname = (string)_context.Reader["Lastname"];
                     per.Dni = (string)_context.Reader["DNI"];
@@ -54,7 +54,7 @@ namespace Business
             {
                 if(item.Dni == dni)
                 {
-                    return item.Id;
+                    return item.IdPerson;
                 }
             }
             return -1;
