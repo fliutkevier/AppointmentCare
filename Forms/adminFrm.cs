@@ -35,7 +35,8 @@ namespace UI
         {
             DoctorService doctorService = new DoctorService();
             dgvDoctors.DataSource = doctorService.getAllDoctors();
-            dgvDoctors.Columns["Id"].Visible = false;
+            dgvDoctors.Columns["IdPerson"].Visible = false;
+            dgvDoctors.Columns["IdDoctor"].Visible = false;
             dgvDoctors.Columns["License"].DisplayIndex = 5;
             dgvDoctors.Columns["SpecialityType"].DisplayIndex = 5;
         }
@@ -48,8 +49,7 @@ namespace UI
 
         private void btnAddPatient_Click(object sender, EventArgs e)
         {
-
-            frmAddAndMod frmAdd = new frmAddAndMod();
+            frmPatientAddAndMod frmAdd = new frmPatientAddAndMod();
             frmAdd.ShowDialog();
             loadPatients();
         }
@@ -58,7 +58,7 @@ namespace UI
         {
             patient = (Patient)dgvPatients.CurrentRow.DataBoundItem;
 
-            frmAddAndMod frmAdd = new frmAddAndMod(true, patient);
+            frmPatientAddAndMod frmAdd = new frmPatientAddAndMod(true, patient);
             frmAdd.ShowDialog();
             loadPatients();
         }
@@ -79,6 +79,13 @@ namespace UI
                     MessageBox.Show("No fue posible eliminar este paciente.");
                 }
             }
+        }
+
+        private void btnAddDoctor_Click(object sender, EventArgs e)
+        {
+            frmPatientAddAndMod frmAdd = new frmPatientAddAndMod();
+            frmAdd.ShowDialog();
+            loadDoctors();
         }
     }
 }

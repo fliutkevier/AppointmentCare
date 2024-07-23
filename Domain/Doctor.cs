@@ -8,8 +8,15 @@ namespace Domain
 {
     public class Doctor : Person
     {
-        public int Id { get; set; }
-        public int License { get; set; }
+        public int IdDoctor { get; set; }
+        public string License { get; set; }
         public Speciality SpecialityType { get; set; }
+
+        public Doctor() : base()
+        {
+            IdDoctor = 0;
+            License = string.Empty;
+            SpecialityType = new Speciality();
+        }
     }
 }

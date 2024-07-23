@@ -12,16 +12,17 @@ using System.Windows.Forms;
 
 namespace UI
 {
-    public partial class frmAddAndMod : Form
+    public partial class frmPatientAddAndMod : Form
     {
         private bool isModifying;
         private Patient patient = null!;
-        public frmAddAndMod()
+        public frmPatientAddAndMod()
         {
+            patient = new Patient();
             InitializeComponent();
         }
 
-        public frmAddAndMod(bool isModifying, Patient patientCharged)
+        public frmPatientAddAndMod(bool isModifying, Patient patientCharged)
         {
             patient = patientCharged;
             this.isModifying = isModifying;
@@ -42,7 +43,6 @@ namespace UI
             }
             catch (Exception)
             {
-
                 throw;
             }
             if (patient.IdPerson > 0)
@@ -62,8 +62,7 @@ namespace UI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            int isNumber;
-            if(!int.TryParse(tbxDni.Text, out isNumber))
+            if (!Helper.IsOnlyNumber(tbxDni.Text))
             {
                 MessageBox.Show("Dni invalido.", "ERROR", MessageBoxButtons.OK);
             }

@@ -95,6 +95,7 @@
             btnAddDoctor.TabIndex = 5;
             btnAddDoctor.Text = "AGREGAR";
             btnAddDoctor.UseVisualStyleBackColor = true;
+            btnAddDoctor.Click += btnAddDoctor_Click;
             // 
             // btnModifyDoctor
             // 

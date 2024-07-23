@@ -15,7 +15,7 @@ namespace Domain
         [DisplayName("Numero de Obra Social")]
         public string HealthInsuranceNumber { get; set; }
 
-        public Patient()
+        public Patient() : base()
         {
             IdPatient = 0;
             HealthInsurance = new HealthInsurance();

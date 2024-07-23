@@ -1,6 +1,6 @@
 ﻿namespace UI
 {
-    partial class frmAddAndMod
+    partial class frmPatientAddAndMod
     {
         /// <summary>
         /// Required designer variable.
