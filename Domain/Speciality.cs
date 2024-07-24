@@ -10,5 +10,16 @@ namespace Domain
     {
         public int Id { get; set; }
         public string Description { get; set; }
+
+        public Speciality()
+        {
+            Id = 0;
+            Description = string.Empty;
+        }
+
+        public override string ToString()
+        {
+            return Description;
+        }
     }
 }

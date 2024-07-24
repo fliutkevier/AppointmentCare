@@ -17,7 +17,7 @@ namespace Business
 			List<Patient> patients = new List<Patient>();
 			try
 			{
-				_context.SetQuery("SELECT Per.Id, Pat.Id AS IdPatient, Name, Lastname, DNI, H.Provider, Pat.HealthInsuranceNumber, Address, Phone, Birthday FROM Persons Per, Patients Pat, HealthInsurances H WHERE Per.Id = Pat.PersonId AND Pat.HealthInsuranceId = H.Id");
+				_context.SetQuery("SELECT Per.Id, Pat.Id AS IdPatient, Name, Lastname, DNI, H.Id AS ProviderId, H.Provider AS Provider, Pat.HealthInsuranceNumber, Address, Phone, Birthday FROM Persons Per, Patients Pat, HealthInsurances H WHERE Per.Id = Pat.PersonId AND Pat.HealthInsuranceId = H.Id");
 				_context.ExecRead();
 
 				while (_context.Reader.Read())
@@ -29,7 +29,8 @@ namespace Business
 					patient.Lastname = (string)_context.Reader["Lastname"];
 					patient.Dni = (string)_context.Reader["DNI"];
 					patient.HealthInsurance = new HealthInsurance();
-					patient.HealthInsurance.Provider = (string)_context.Reader["Provider"];
+					patient.HealthInsurance.Id = (int)_context.Reader["ProviderId"];
+                    patient.HealthInsurance.Provider = (string)_context.Reader["Provider"];
 					patient.HealthInsuranceNumber = (string)_context.Reader["HealthInsuranceNumber"];
 					patient.Address = (string)_context.Reader["Address"];
 					patient.Phone = (string)_context.Reader["Phone"];

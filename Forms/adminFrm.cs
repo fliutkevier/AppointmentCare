@@ -23,8 +23,7 @@ namespace UI
         public void loadPatients()
         {
             PatientService patService = new PatientService();
-            var lstPatients = patService.getAllPatients();
-            dgvPatients.DataSource = lstPatients;
+            dgvPatients.DataSource = patService.getAllPatients();
             dgvPatients.Columns["IdPatient"].Visible = false;
             dgvPatients.Columns["IdPerson"].Visible = false;
             dgvPatients.Columns["HealthInsurance"].DisplayIndex = 5;
@@ -34,7 +33,7 @@ namespace UI
         public void loadDoctors()
         {
             DoctorService doctorService = new DoctorService();
-            dgvDoctors.DataSource = doctorService.getAllDoctors();
+            dgvDoctors.DataSource = doctorService.GetAll();
             dgvDoctors.Columns["IdPerson"].Visible = false;
             dgvDoctors.Columns["IdDoctor"].Visible = false;
             dgvDoctors.Columns["License"].DisplayIndex = 5;
@@ -73,6 +72,7 @@ namespace UI
                 if (patientService.Delete(patient))
                 {
                     MessageBox.Show("Paciente eliminado.");
+                    loadPatients();
                 }
                 else
                 {
@@ -83,9 +83,45 @@ namespace UI
 
         private void btnAddDoctor_Click(object sender, EventArgs e)
         {
-            frmPatientAddAndMod frmAdd = new frmPatientAddAndMod();
+            Doctor doctor = new Doctor();
+            frmDoctorAddAndMod frmAdd = new frmDoctorAddAndMod(doctor);
             frmAdd.ShowDialog();
             loadDoctors();
+        }
+
+        private void btnModifyDoctor_Click(object sender, EventArgs e)
+        {
+            Doctor doctor = (Doctor)dgvDoctors.CurrentRow.DataBoundItem;
+            frmDoctorAddAndMod frmAdd = new frmDoctorAddAndMod(doctor);
+            frmAdd.ShowDialog();
+            loadDoctors();
+        }
+
+        private void btnDeleteDoctor_Click(object sender, EventArgs e)
+        {
+            Doctor doctor = (Doctor)dgvDoctors.CurrentRow.DataBoundItem;
+            DoctorService doctorService = new DoctorService();
+            DialogResult yesOrNo = MessageBox.Show("¿Está seguro que desea eliminar este doctor?", "ELIMINACIÓN...", MessageBoxButtons.YesNo);
+            if (yesOrNo == DialogResult.Yes)
+            {
+                try
+                {
+                    if (doctorService.Delete(doctor))
+                    {
+                        MessageBox.Show("Doctor eliminado.");
+                        loadDoctors();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No fue posible eliminar este Doctor.");
+                    }
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            }
         }
     }
 }

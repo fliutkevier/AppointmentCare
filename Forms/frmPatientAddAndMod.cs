@@ -40,6 +40,8 @@ namespace UI
             try
             {
                 cbxHealthInsurance.DataSource = hIServ.getAllInsurances();
+                cbxHealthInsurance.ValueMember = "Id";
+                cbxHealthInsurance.DisplayMember = "Provider";
             }
             catch (Exception)
             {
@@ -56,7 +58,8 @@ namespace UI
                 tbxHealthInsuranceNumber.Text = patient.HealthInsuranceNumber;
                 tbxPhone.Text = patient.Phone;
                 dtpBirthday.Value = patient.BirthDay.ToDateTime(TimeOnly.MinValue);
-                cbxHealthInsurance.SelectedItem = patient.HealthInsurance.Id;
+                
+                cbxHealthInsurance.SelectedValue = patient.HealthInsurance.Id;
             }
         }
 

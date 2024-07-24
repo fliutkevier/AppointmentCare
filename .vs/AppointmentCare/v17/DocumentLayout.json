@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DD8AA34D-4A90-41A8-9F14-C4AF8F5F2DA1}|Forms\\UI.csproj|c:\\programming\\asignaturns2.0\\appointmentcare\\forms\\frmaddandmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD8AA34D-4A90-41A8-9F14-C4AF8F5F2DA1}|Forms\\UI.csproj|solutionrelative:forms\\frmaddandmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DD8AA34D-4A90-41A8-9F14-C4AF8F5F2DA1}|Forms\\UI.csproj|c:\\programming\\asignaturns2.0\\appointmentcare\\forms\\adminfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD8AA34D-4A90-41A8-9F14-C4AF8F5F2DA1}|Forms\\UI.csproj|solutionrelative:forms\\adminfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,36 +11,60 @@
       "RelativeMoniker": "D:0:0:{DD8AA34D-4A90-41A8-9F14-C4AF8F5F2DA1}|Forms\\UI.csproj|solutionrelative:forms\\adminfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{261E36C6-B615-474F-8DC5-7342ACB06D85}|Data\\Data.csproj|c:\\programming\\asignaturns2.0\\appointmentcare\\data\\appcaredata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{261E36C6-B615-474F-8DC5-7342ACB06D85}|Data\\Data.csproj|solutionrelative:data\\appcaredata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8075786C-6C40-4EA6-8B6C-36A375A4DD34}|Business\\Business.csproj|c:\\programming\\asignaturns2.0\\appointmentcare\\business\\doctorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8075786C-6C40-4EA6-8B6C-36A375A4DD34}|Business\\Business.csproj|solutionrelative:business\\doctorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD8AA34D-4A90-41A8-9F14-C4AF8F5F2DA1}|Forms\\UI.csproj|c:\\programming\\asignaturns2.0\\appointmentcare\\forms\\frmdoctoraddandmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DD8AA34D-4A90-41A8-9F14-C4AF8F5F2DA1}|Forms\\UI.csproj|solutionrelative:forms\\frmdoctoraddandmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD8AA34D-4A90-41A8-9F14-C4AF8F5F2DA1}|Forms\\UI.csproj|c:\\programming\\asignaturns2.0\\appointmentcare\\forms\\frmpatientaddandmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD8AA34D-4A90-41A8-9F14-C4AF8F5F2DA1}|Forms\\UI.csproj|solutionrelative:forms\\frmpatientaddandmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD8AA34D-4A90-41A8-9F14-C4AF8F5F2DA1}|Forms\\UI.csproj|c:\\programming\\asignaturns2.0\\appointmentcare\\forms\\frmdoctoraddandmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD8AA34D-4A90-41A8-9F14-C4AF8F5F2DA1}|Forms\\UI.csproj|solutionrelative:forms\\frmdoctoraddandmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37B6A148-2418-4CED-96F1-ED6CBF43FC53}|Domain\\Domain.csproj|c:\\programming\\asignaturns2.0\\appointmentcare\\domain\\speciality.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37B6A148-2418-4CED-96F1-ED6CBF43FC53}|Domain\\Domain.csproj|solutionrelative:domain\\speciality.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{37B6A148-2418-4CED-96F1-ED6CBF43FC53}|Domain\\Domain.csproj|c:\\programming\\asignaturns2.0\\appointmentcare\\domain\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{37B6A148-2418-4CED-96F1-ED6CBF43FC53}|Domain\\Domain.csproj|solutionrelative:domain\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{37B6A148-2418-4CED-96F1-ED6CBF43FC53}|Domain\\Domain.csproj|c:\\programming\\asignaturns2.0\\appointmentcare\\domain\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{37B6A148-2418-4CED-96F1-ED6CBF43FC53}|Domain\\Domain.csproj|solutionrelative:domain\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8075786C-6C40-4EA6-8B6C-36A375A4DD34}|Business\\Business.csproj|c:\\programming\\asignaturns2.0\\appointmentcare\\business\\patientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8075786C-6C40-4EA6-8B6C-36A375A4DD34}|Business\\Business.csproj|solutionrelative:business\\patientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{261E36C6-B615-474F-8DC5-7342ACB06D85}|Data\\Data.csproj|c:\\programming\\asignaturns2.0\\appointmentcare\\data\\appcaredata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{261E36C6-B615-474F-8DC5-7342ACB06D85}|Data\\Data.csproj|solutionrelative:data\\appcaredata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{37B6A148-2418-4CED-96F1-ED6CBF43FC53}|Domain\\Domain.csproj|c:\\programming\\asignaturns2.0\\appointmentcare\\domain\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{37B6A148-2418-4CED-96F1-ED6CBF43FC53}|Domain\\Domain.csproj|solutionrelative:domain\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8075786C-6C40-4EA6-8B6C-36A375A4DD34}|Business\\Business.csproj|c:\\programming\\asignaturns2.0\\appointmentcare\\business\\healthinsuranceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8075786C-6C40-4EA6-8B6C-36A375A4DD34}|Business\\Business.csproj|solutionrelative:business\\healthinsuranceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{37B6A148-2418-4CED-96F1-ED6CBF43FC53}|Domain\\Domain.csproj|c:\\programming\\asignaturns2.0\\appointmentcare\\domain\\healthinsurance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{37B6A148-2418-4CED-96F1-ED6CBF43FC53}|Domain\\Domain.csproj|solutionrelative:domain\\healthinsurance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8075786C-6C40-4EA6-8B6C-36A375A4DD34}|Business\\Business.csproj|c:\\programming\\asignaturns2.0\\appointmentcare\\business\\healthinsuranceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8075786C-6C40-4EA6-8B6C-36A375A4DD34}|Business\\Business.csproj|solutionrelative:business\\healthinsuranceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{37B6A148-2418-4CED-96F1-ED6CBF43FC53}|Domain\\Domain.csproj|c:\\programming\\asignaturns2.0\\appointmentcare\\domain\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37B6A148-2418-4CED-96F1-ED6CBF43FC53}|Domain\\Domain.csproj|solutionrelative:domain\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD8AA34D-4A90-41A8-9F14-C4AF8F5F2DA1}|Forms\\UI.csproj|c:\\programming\\asignaturns2.0\\appointmentcare\\forms\\frmpatientaddandmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DD8AA34D-4A90-41A8-9F14-C4AF8F5F2DA1}|Forms\\UI.csproj|solutionrelative:forms\\frmpatientaddandmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Forms\\frmAddAndMod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Forms\\frmAddAndMod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37B6A148-2418-4CED-96F1-ED6CBF43FC53}|Domain\\Domain.csproj|c:\\programming\\asignaturns2.0\\appointmentcare\\domain\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37B6A148-2418-4CED-96F1-ED6CBF43FC53}|Domain\\Domain.csproj|solutionrelative:domain\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{37B6A148-2418-4CED-96F1-ED6CBF43FC53}|Domain\\Domain.csproj|c:\\programming\\asignaturns2.0\\appointmentcare\\domain\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -55,16 +75,8 @@
       "RelativeMoniker": "D:0:0:{8075786C-6C40-4EA6-8B6C-36A375A4DD34}|Business\\Business.csproj|solutionrelative:business\\personservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD8AA34D-4A90-41A8-9F14-C4AF8F5F2DA1}|Forms\\UI.csproj|C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\forms\\frmaddandmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DD8AA34D-4A90-41A8-9F14-C4AF8F5F2DA1}|Forms\\UI.csproj|solutionrelative:forms\\frmaddandmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8075786C-6C40-4EA6-8B6C-36A375A4DD34}|Business\\Business.csproj|c:\\programming\\asignaturns2.0\\appointmentcare\\business\\specialityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8075786C-6C40-4EA6-8B6C-36A375A4DD34}|Business\\Business.csproj|solutionrelative:business\\specialityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{37B6A148-2418-4CED-96F1-ED6CBF43FC53}|Domain\\Domain.csproj|c:\\programming\\asignaturns2.0\\appointmentcare\\domain\\speciality.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{37B6A148-2418-4CED-96F1-ED6CBF43FC53}|Domain\\Domain.csproj|solutionrelative:domain\\speciality.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8075786C-6C40-4EA6-8B6C-36A375A4DD34}|Business\\Business.csproj|c:\\programming\\asignaturns2.0\\appointmentcare\\business\\mainservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -81,6 +93,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{DD8AA34D-4A90-41A8-9F14-C4AF8F5F2DA1}|Forms\\UI.csproj|C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DD8AA34D-4A90-41A8-9F14-C4AF8F5F2DA1}|Forms\\UI.csproj|solutionrelative:forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\forms\\frmaddandmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:forms\\frmaddandmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -90,24 +106,89 @@
       "DocumentGroups": [
         {
           "DockedWidth": 256,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "adminFrm.cs",
               "DocumentMoniker": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Forms\\adminFrm.cs",
               "RelativeDocumentMoniker": "Forms\\adminFrm.cs",
               "ToolTip": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Forms\\adminFrm.cs",
               "RelativeToolTip": "Forms\\adminFrm.cs",
-              "ViewState": "AQIAAEUAAAAAAAAAAAAIwFUAAAAyAAAA",
+              "ViewState": "AQIAADQAAAAAAAAAAAAiwEoAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-05T15:46:08.451Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
+              "Title": "frmPatientAddAndMod.cs",
+              "DocumentMoniker": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Forms\\frmPatientAddAndMod.cs",
+              "RelativeDocumentMoniker": "Forms\\frmPatientAddAndMod.cs",
+              "ToolTip": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Forms\\frmPatientAddAndMod.cs",
+              "RelativeToolTip": "Forms\\frmPatientAddAndMod.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAwwBsAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T15:08:40.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PatientService.cs",
+              "DocumentMoniker": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Business\\PatientService.cs",
+              "RelativeDocumentMoniker": "Business\\PatientService.cs",
+              "ToolTip": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Business\\PatientService.cs",
+              "RelativeToolTip": "Business\\PatientService.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAwwCEAAABWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-09T22:46:36.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "HealthInsuranceService.cs",
+              "DocumentMoniker": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Business\\HealthInsuranceService.cs",
+              "RelativeDocumentMoniker": "Business\\HealthInsuranceService.cs",
+              "ToolTip": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Business\\HealthInsuranceService.cs",
+              "RelativeToolTip": "Business\\HealthInsuranceService.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACUAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T13:08:58.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Doctor.cs",
+              "DocumentMoniker": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Domain\\Doctor.cs",
+              "RelativeDocumentMoniker": "Domain\\Doctor.cs",
+              "ToolTip": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Domain\\Doctor.cs",
+              "RelativeToolTip": "Domain\\Doctor.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T00:59:52.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Speciality.cs",
+              "DocumentMoniker": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Domain\\Speciality.cs",
+              "RelativeDocumentMoniker": "Domain\\Speciality.cs",
+              "ToolTip": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Domain\\Speciality.cs",
+              "RelativeToolTip": "Domain\\Speciality.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T01:01:02.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "adminFrm.cs [Design]",
               "DocumentMoniker": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Forms\\adminFrm.cs",
               "RelativeDocumentMoniker": "Forms\\adminFrm.cs",
@@ -119,7 +200,84 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
+              "Title": "Patient.cs",
+              "DocumentMoniker": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Domain\\Patient.cs",
+              "RelativeDocumentMoniker": "Domain\\Patient.cs",
+              "ToolTip": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Domain\\Patient.cs",
+              "RelativeToolTip": "Domain\\Patient.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABUAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T16:42:39.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppCareData.cs",
+              "DocumentMoniker": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Data\\AppCareData.cs",
+              "RelativeDocumentMoniker": "Data\\AppCareData.cs",
+              "ToolTip": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Data\\AppCareData.cs",
+              "RelativeToolTip": "Data\\AppCareData.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAmwEMAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T15:55:29.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DoctorService.cs",
+              "DocumentMoniker": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Business\\DoctorService.cs",
+              "RelativeDocumentMoniker": "Business\\DoctorService.cs",
+              "ToolTip": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Business\\DoctorService.cs",
+              "RelativeToolTip": "Business\\DoctorService.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAAAcwI8AAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T13:42:41.631Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmDoctorAddAndMod.cs [Design]",
+              "DocumentMoniker": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Forms\\frmDoctorAddAndMod.cs",
+              "RelativeDocumentMoniker": "Forms\\frmDoctorAddAndMod.cs",
+              "ToolTip": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Forms\\frmDoctorAddAndMod.cs [Design]",
+              "RelativeToolTip": "Forms\\frmDoctorAddAndMod.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T14:42:57.764Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmDoctorAddAndMod.cs",
+              "DocumentMoniker": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Forms\\frmDoctorAddAndMod.cs",
+              "RelativeDocumentMoniker": "Forms\\frmDoctorAddAndMod.cs",
+              "ToolTip": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Forms\\frmDoctorAddAndMod.cs",
+              "RelativeToolTip": "Forms\\frmDoctorAddAndMod.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAzwE4AAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T14:44:07.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "HealthInsurance.cs",
+              "DocumentMoniker": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Domain\\HealthInsurance.cs",
+              "RelativeDocumentMoniker": "Domain\\HealthInsurance.cs",
+              "ToolTip": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Domain\\HealthInsurance.cs",
+              "RelativeToolTip": "Domain\\HealthInsurance.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T01:00:44.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "Person.cs",
               "DocumentMoniker": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Domain\\Person.cs",
               "RelativeDocumentMoniker": "Domain\\Person.cs",
@@ -127,36 +285,34 @@
               "RelativeToolTip": "Domain\\Person.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T01:00:26.341Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-03T01:00:26.341Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Patient.cs",
-              "DocumentMoniker": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Domain\\Patient.cs",
-              "RelativeDocumentMoniker": "Domain\\Patient.cs",
-              "ToolTip": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Domain\\Patient.cs",
-              "RelativeToolTip": "Domain\\Patient.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABQAAAA0AAAA",
+              "DocumentIndex": 13,
+              "Title": "frmPatientAddAndMod.cs [Design]",
+              "DocumentMoniker": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Forms\\frmPatientAddAndMod.cs",
+              "RelativeDocumentMoniker": "Forms\\frmPatientAddAndMod.cs",
+              "ToolTip": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Forms\\frmPatientAddAndMod.cs [Design]",
+              "RelativeToolTip": "Forms\\frmPatientAddAndMod.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-19T16:42:39.639Z"
+              "WhenOpened": "2024-07-24T15:08:38.032Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "PersonService.cs",
-              "DocumentMoniker": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Business\\PersonService.cs",
-              "RelativeDocumentMoniker": "Business\\PersonService.cs",
-              "ToolTip": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Business\\PersonService.cs",
-              "RelativeToolTip": "Business\\PersonService.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAtwDgAAAAoAAAA",
+              "DocumentIndex": 14,
+              "Title": "frmAddAndMod.cs",
+              "DocumentMoniker": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Forms\\frmAddAndMod.cs",
+              "RelativeDocumentMoniker": "Forms\\frmAddAndMod.cs",
+              "ToolTip": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Forms\\frmAddAndMod.cs",
+              "RelativeToolTip": "Forms\\frmAddAndMod.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-20T16:08:25.552Z"
+              "WhenOpened": "2024-07-17T14:44:24.629Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "Appointment.cs",
               "DocumentMoniker": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Domain\\Appointment.cs",
               "RelativeDocumentMoniker": "Domain\\Appointment.cs",
@@ -168,82 +324,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "HealthInsurance.cs",
-              "DocumentMoniker": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Domain\\HealthInsurance.cs",
-              "RelativeDocumentMoniker": "Domain\\HealthInsurance.cs",
-              "ToolTip": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Domain\\HealthInsurance.cs",
-              "RelativeToolTip": "Domain\\HealthInsurance.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAAAkAAAA",
+              "DocumentIndex": 17,
+              "Title": "PersonService.cs",
+              "DocumentMoniker": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Business\\PersonService.cs",
+              "RelativeDocumentMoniker": "Business\\PersonService.cs",
+              "ToolTip": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Business\\PersonService.cs",
+              "RelativeToolTip": "Business\\PersonService.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAtwDgAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T01:00:44.965Z"
+              "WhenOpened": "2024-07-20T16:08:25.552Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AppCareData.cs",
-              "DocumentMoniker": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Data\\AppCareData.cs",
-              "RelativeDocumentMoniker": "Data\\AppCareData.cs",
-              "ToolTip": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Data\\AppCareData.cs",
-              "RelativeToolTip": "Data\\AppCareData.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAAmwEMAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-05T15:55:29.663Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PatientService.cs",
-              "DocumentMoniker": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Business\\PatientService.cs",
-              "RelativeDocumentMoniker": "Business\\PatientService.cs",
-              "ToolTip": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Business\\PatientService.cs",
-              "RelativeToolTip": "Business\\PatientService.cs",
-              "ViewState": "AQIAAGEAAAAAAAAAAAAYwJIAAABJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T22:46:36.982Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Doctor.cs",
-              "DocumentMoniker": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Domain\\Doctor.cs",
-              "RelativeDocumentMoniker": "Domain\\Doctor.cs",
-              "ToolTip": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Domain\\Doctor.cs",
-              "RelativeToolTip": "Domain\\Doctor.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T00:59:52.264Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmAddAndMod.cs",
-              "DocumentMoniker": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Forms\\frmAddAndMod.cs",
-              "RelativeDocumentMoniker": "Forms\\frmAddAndMod.cs",
-              "ToolTip": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Forms\\frmAddAndMod.cs",
-              "RelativeToolTip": "Forms\\frmAddAndMod.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAqwBQAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T14:44:24.629Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DoctorService.cs",
-              "DocumentMoniker": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Business\\DoctorService.cs",
-              "RelativeDocumentMoniker": "Business\\DoctorService.cs",
-              "ToolTip": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Business\\DoctorService.cs",
-              "RelativeToolTip": "Business\\DoctorService.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAADQAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T13:42:41.631Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "SpecialityService.cs",
               "DocumentMoniker": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Business\\SpecialityService.cs",
               "RelativeDocumentMoniker": "Business\\SpecialityService.cs",
@@ -255,31 +348,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "HealthInsuranceService.cs",
-              "DocumentMoniker": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Business\\HealthInsuranceService.cs",
-              "RelativeDocumentMoniker": "Business\\HealthInsuranceService.cs",
-              "ToolTip": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Business\\HealthInsuranceService.cs",
-              "RelativeToolTip": "Business\\HealthInsuranceService.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAD4vyUAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-19T13:08:58.976Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Speciality.cs",
-              "DocumentMoniker": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Domain\\Speciality.cs",
-              "RelativeDocumentMoniker": "Domain\\Speciality.cs",
-              "ToolTip": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Domain\\Speciality.cs",
-              "RelativeToolTip": "Domain\\Speciality.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T01:01:02.079Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 23,
               "Title": "frmAddAndMod.cs [Design]",
               "DocumentMoniker": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Forms\\frmAddAndMod.cs",
               "RelativeDocumentMoniker": "Forms\\frmAddAndMod.cs",
@@ -290,7 +359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "mainService.cs",
               "DocumentMoniker": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Business\\mainService.cs",
               "RelativeDocumentMoniker": "Business\\mainService.cs",
@@ -302,7 +371,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "UI",
               "DocumentMoniker": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Forms\\UI.csproj",
               "RelativeDocumentMoniker": "Forms\\UI.csproj",
@@ -313,7 +382,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "mainForm.cs",
               "DocumentMoniker": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Forms\\mainForm.cs",
               "RelativeDocumentMoniker": "Forms\\mainForm.cs",
@@ -326,7 +395,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "mainForm.cs [Design]",
               "DocumentMoniker": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Forms\\mainForm.cs",
               "RelativeDocumentMoniker": "Forms\\mainForm.cs",

@@ -105,6 +105,7 @@
             btnModifyDoctor.TabIndex = 6;
             btnModifyDoctor.Text = "MODIFICAR";
             btnModifyDoctor.UseVisualStyleBackColor = true;
+            btnModifyDoctor.Click += btnModifyDoctor_Click;
             // 
             // btnDeleteDoctor
             // 
@@ -114,6 +115,7 @@
             btnDeleteDoctor.TabIndex = 7;
             btnDeleteDoctor.Text = "ELIMINAR";
             btnDeleteDoctor.UseVisualStyleBackColor = true;
+            btnDeleteDoctor.Click += btnDeleteDoctor_Click;
             // 
             // adminFrm
             // 
