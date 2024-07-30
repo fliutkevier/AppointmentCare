@@ -4,6 +4,12 @@
     <Compile Update="adminFrm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmAddAvailableAppointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmAppointmentsMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmDoctorAddAndMod.cs">
       <SubType>Form</SubType>
     </Compile>

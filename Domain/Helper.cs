@@ -20,5 +20,20 @@ namespace Domain
                 return false;
             }
         }
+
+        public static List<TimeOnly> listSchedules()
+        {
+            List<TimeOnly> schedules = new List<TimeOnly>();
+            TimeOnly time = new TimeOnly(07, 0);
+            
+            int cantHours = 12;
+
+            for (int i = 0; i < cantHours; i++)
+            {
+                var hours = time.AddHours(i);
+                schedules.Add(hours);
+            }
+            return schedules;
+        }
     }
 }

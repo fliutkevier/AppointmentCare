@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,25 +10,12 @@ namespace Domain
 {
     public class Appointment
     {
-        private int _id;
-        private int _doctorId;
-        private int _pacientId;
-        private DateTime _shedule;
         public int Id { get; set; }
-        public int DoctorId
-        {
-            get { return _doctorId; }
-            set { _doctorId = value; }
-        }
-        public int PacientId
-        {
-            get { return _pacientId; }
-            set { PacientId = value; }
-        }
-        public DateTime Schedule
-        {
-            get { return _shedule; }
-            set { _shedule = value; }
-        }
+        [DisplayName("Profesional")]
+        public int DoctorId { get; set; }
+        [DisplayName("Paciente")]
+        public int PatientId { get; set; }
+        [DisplayName("Fecha y Hora")]
+        public DateTime Schedule { get; set; }
     }
 }

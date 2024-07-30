@@ -149,3 +149,5 @@ C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\run
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\obj\Debug\net8.0-windows\UI.sourcelink.json
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\obj\Debug\net8.0-windows\UI.frmDoctorAddAndMod.resources
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\obj\Debug\net8.0-windows\UI.frmPatientAddAndMod.resources
+C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\obj\Debug\net8.0-windows\UI.frmAppointmentsMain.resources
+C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\obj\Debug\net8.0-windows\UI.frmAddAvailableAppointment.resources

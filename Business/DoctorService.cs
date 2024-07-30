@@ -163,5 +163,62 @@ namespace Business
             }
             finally { _context.Close(); }
         }
+
+        public List<string> getLicenses()
+        {
+            List<string> licensesList = new List<string>();
+
+            try
+            {
+                _context.SetQuery("SELECT License FROM DOCTORS");
+                _context.ExecRead();
+
+                while (_context.Reader.Read())
+                {
+                    string license = (string)_context.Reader["License"];
+                    
+                    licensesList.Add(license);
+                }
+
+                return licensesList;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                _context.Close();
+            }
+        }
+
+        public int getIdByLicense(string license)
+        {
+            int id = 0;
+
+            try
+            {
+                _context.SetQuery("SELECT Id FROM Doctors WHERE License = @License");
+                _context.SetParammeter("@License", license);
+                _context.ExecRead();
+
+                if(_context.Reader.Read())
+                {
+                    id = (int)_context.Reader["Id"];
+                }
+
+                return id;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                _context.Close();
+            }
+        }
     }
 }

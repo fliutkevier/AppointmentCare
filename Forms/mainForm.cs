@@ -15,5 +15,11 @@ namespace Forms
             frm.ShowDialog();
 
         }
+
+        private void btnAppointment_Click(object sender, EventArgs e)
+        {
+            frmAppointmentsMain frm = new frmAppointmentsMain();
+            frm.ShowDialog();
+        }
     }
 }
