@@ -1,4 +1,7 @@
-# AppointmentCare
+# AppointmentCare (WIP)
+Work In Progress.
 
-Este programa lo realicé desde la idea de AsignaTurns, con objetivo de cumplir mínimamente sus acciones básicas.
-Este CRUD fue desarrollado con C# utilizando WinForms .NET 8 y ADO, con una base de datos creada en SQL Server.
+I developed this program based on the idea of 'AsignaTurns'.
+This CRUD was developed using C# with WinForms .NET 8 and ADO, with a database created in SQL Server.
+
+More info in the future...
