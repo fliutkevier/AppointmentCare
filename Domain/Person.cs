@@ -24,6 +24,10 @@ namespace Domain
         public string Phone { get; set; }
         [DisplayName("Fecha de Nacimiento")]
         public DateOnly BirthDay { get; set; }
+        public string FullName
+        {
+            get { return $"{Name} {Lastname}"; }
+        }
 
         public Person()
         {

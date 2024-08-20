@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using Data;
@@ -10,6 +11,7 @@ namespace Business
 {
     public class PersonService : mainService
     {
+        private List<Person> _list;
         public PersonService() : base() { }
 
         public List<Person> getAllPersons()
@@ -49,15 +51,14 @@ namespace Business
 
         public int GetIdByDni(string dni)
         {
-            List<Person> people = getAllPersons();
-            foreach (Person item in people)
-            {
-                if(item.Dni == dni)
-                {
-                    return item.IdPerson;
-                }
-            }
-            return -1;
+            _list = getAllPersons();
+            return _list.First(person => person.Dni == dni).IdPerson;
+        }
+
+        public Person GetById(int id)
+        {
+            _list = getAllPersons();
+            return _list.First(person => person.IdPerson == id);
         }
     }
 }

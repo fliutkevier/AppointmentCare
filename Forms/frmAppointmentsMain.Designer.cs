@@ -30,6 +30,10 @@
         {
             btnAddAvailable = new Button();
             dgvAppointments = new DataGridView();
+            label1 = new Label();
+            btnAssignateAppointment = new Button();
+            btnChangeAppointment = new Button();
+            btnDeleteAppointment = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvAppointments).BeginInit();
             SuspendLayout();
             // 
@@ -48,26 +52,77 @@
             dgvAppointments.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvAppointments.Location = new Point(39, 93);
             dgvAppointments.Name = "dgvAppointments";
+            dgvAppointments.ReadOnly = true;
+            dgvAppointments.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvAppointments.Size = new Size(781, 382);
             dgvAppointments.TabIndex = 1;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Open Sans", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(39, 62);
+            label1.Name = "label1";
+            label1.Size = new Size(204, 28);
+            label1.TabIndex = 2;
+            label1.Text = "Todos los Turnos:";
+            // 
+            // btnAssignateAppointment
+            // 
+            btnAssignateAppointment.Location = new Point(43, 509);
+            btnAssignateAppointment.Name = "btnAssignateAppointment";
+            btnAssignateAppointment.Size = new Size(172, 38);
+            btnAssignateAppointment.TabIndex = 3;
+            btnAssignateAppointment.Text = "Asignar Turno a Paciente";
+            btnAssignateAppointment.UseVisualStyleBackColor = true;
+            btnAssignateAppointment.Click += btnAssignateAppointment_Click;
+            // 
+            // btnChangeAppointment
+            // 
+            btnChangeAppointment.Location = new Point(241, 509);
+            btnChangeAppointment.Name = "btnChangeAppointment";
+            btnChangeAppointment.Size = new Size(172, 38);
+            btnChangeAppointment.TabIndex = 4;
+            btnChangeAppointment.Text = "Cambiar Turno";
+            btnChangeAppointment.UseVisualStyleBackColor = true;
+            btnChangeAppointment.Click += btnChangeAppointment_Click;
+            // 
+            // btnDeleteAppointment
+            // 
+            btnDeleteAppointment.Location = new Point(445, 509);
+            btnDeleteAppointment.Name = "btnDeleteAppointment";
+            btnDeleteAppointment.Size = new Size(172, 38);
+            btnDeleteAppointment.TabIndex = 5;
+            btnDeleteAppointment.Text = "Eliminar Turno";
+            btnDeleteAppointment.UseVisualStyleBackColor = true;
             // 
             // frmAppointmentsMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(858, 606);
+            Controls.Add(btnDeleteAppointment);
+            Controls.Add(btnChangeAppointment);
+            Controls.Add(btnAssignateAppointment);
+            Controls.Add(label1);
             Controls.Add(dgvAppointments);
             Controls.Add(btnAddAvailable);
             Name = "frmAppointmentsMain";
-            Text = "frmAppointmentsMain";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Turnos";
             Load += frmAppointmentsMain_Load;
             ((System.ComponentModel.ISupportInitialize)dgvAppointments).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Button btnAddAvailable;
         private DataGridView dgvAppointments;
+        private Label label1;
+        private Button btnAssignateAppointment;
+        private Button btnChangeAppointment;
+        private Button btnDeleteAppointment;
     }
 }

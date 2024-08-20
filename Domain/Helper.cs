@@ -11,7 +11,7 @@ namespace Domain
         public static bool IsOnlyNumber(string txt)
         {
             int isNumber;
-            if (!int.TryParse(txt, out isNumber))
+            if (int.TryParse(txt, out isNumber))
             {
                 return true;
             }

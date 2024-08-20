@@ -1,6 +1,6 @@
 ﻿namespace UI
 {
-    partial class adminFrm
+    partial class frmAdmin
     {
         /// <summary>
         /// Required designer variable.
@@ -36,6 +36,8 @@
             btnAddDoctor = new Button();
             btnModifyDoctor = new Button();
             btnDeleteDoctor = new Button();
+            lblPatients = new Label();
+            lblDoctors = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvPatients).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvDoctors).BeginInit();
             SuspendLayout();
@@ -56,6 +58,8 @@
             dgvPatients.Location = new Point(210, 41);
             dgvPatients.MultiSelect = false;
             dgvPatients.Name = "dgvPatients";
+            dgvPatients.ReadOnly = true;
+            dgvPatients.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvPatients.Size = new Size(917, 240);
             dgvPatients.TabIndex = 1;
             // 
@@ -64,6 +68,8 @@
             dgvDoctors.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvDoctors.Location = new Point(210, 362);
             dgvDoctors.Name = "dgvDoctors";
+            dgvDoctors.ReadOnly = true;
+            dgvDoctors.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvDoctors.Size = new Size(917, 242);
             dgvDoctors.TabIndex = 2;
             // 
@@ -117,11 +123,33 @@
             btnDeleteDoctor.UseVisualStyleBackColor = true;
             btnDeleteDoctor.Click += btnDeleteDoctor_Click;
             // 
-            // adminFrm
+            // lblPatients
+            // 
+            lblPatients.AutoSize = true;
+            lblPatients.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPatients.Location = new Point(210, 6);
+            lblPatients.Name = "lblPatients";
+            lblPatients.Size = new Size(122, 32);
+            lblPatients.TabIndex = 8;
+            lblPatients.Text = "Pacientes:";
+            // 
+            // lblDoctors
+            // 
+            lblDoctors.AutoSize = true;
+            lblDoctors.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDoctors.Location = new Point(210, 327);
+            lblDoctors.Name = "lblDoctors";
+            lblDoctors.Size = new Size(117, 32);
+            lblDoctors.TabIndex = 9;
+            lblDoctors.Text = "Doctores:";
+            // 
+            // frmAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1290, 642);
+            Controls.Add(lblDoctors);
+            Controls.Add(lblPatients);
             Controls.Add(btnDeleteDoctor);
             Controls.Add(btnModifyDoctor);
             Controls.Add(btnAddDoctor);
@@ -132,13 +160,14 @@
             Controls.Add(btnAddPatient);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MinimizeBox = false;
-            Name = "adminFrm";
+            Name = "frmAdmin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Admin Profile";
             Load += adminFrm_Load;
             ((System.ComponentModel.ISupportInitialize)dgvPatients).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvDoctors).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -151,5 +180,7 @@
         private Button btnAddDoctor;
         private Button btnModifyDoctor;
         private Button btnDeleteDoctor;
+        private Label lblPatients;
+        private Label lblDoctors;
     }
 }

@@ -12,10 +12,10 @@ using Domain;
 
 namespace UI
 {
-    public partial class adminFrm : Form
+    public partial class frmAdmin : Form
     {
         private Patient patient;
-        public adminFrm()
+        public frmAdmin()
         {
             InitializeComponent();
         }

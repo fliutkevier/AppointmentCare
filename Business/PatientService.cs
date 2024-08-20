@@ -56,13 +56,14 @@ namespace Business
 		{
 			try
 			{
+                _context.ClearParameters();
                 _context.SetQuery("INSERT INTO Persons VALUES (@Name, @Lastname, @Dni, @Address, @Phone, @Birthday)");
-                _context.SetParammeter("@Name", objPat.Name);
-                _context.SetParammeter("@Lastname", objPat.Lastname);
-                _context.SetParammeter("@Dni", objPat.Dni);
-                _context.SetParammeter("@Address", objPat.Address);
-                _context.SetParammeter("@Phone", objPat.Phone);
-                _context.SetParammeter("@Birthday", objPat.BirthDay);
+                _context.SetParameter("@Name", objPat.Name);
+                _context.SetParameter("@Lastname", objPat.Lastname);
+                _context.SetParameter("@Dni", objPat.Dni);
+                _context.SetParameter("@Address", objPat.Address);
+                _context.SetParameter("@Phone", objPat.Phone);
+                _context.SetParameter("@Birthday", objPat.BirthDay);
 
 				if(_context.ExecAction())
 				{
@@ -73,10 +74,11 @@ namespace Business
 					{
 						return false;
 					}
+                    _context.ClearParameters();
                     _context.SetQuery("INSERT INTO Patients VALUES (@PersonId, @HealthInsurance, @HealthInsuranceNumber)");
-                    _context.SetParammeter("@PersonId", objPat.IdPerson);
-                    _context.SetParammeter("@HealthInsurance", objPat.HealthInsurance.Id);
-                    _context.SetParammeter("@HealthInsuranceNumber", objPat.HealthInsuranceNumber);
+                    _context.SetParameter("@PersonId", objPat.IdPerson);
+                    _context.SetParameter("@HealthInsurance", objPat.HealthInsurance.Id);
+                    _context.SetParameter("@HealthInsuranceNumber", objPat.HealthInsuranceNumber);
                     if(_context.ExecAction())
 					{
 						_context.Close();
@@ -101,22 +103,24 @@ namespace Business
 		{
 			try
 			{
+                _context.ClearParameters();
                 _context.SetQuery("UPDATE Persons SET Name = @Name, Lastname = @Lastname, DNI = @Dni, Address = @Address, Phone = @Phone, Birthday = @Birthday WHERE Id = @Id");
-                _context.SetParammeter("@Name", objPat.Name);
-                _context.SetParammeter("@Lastname", objPat.Lastname);
-                _context.SetParammeter("@Dni", objPat.Dni);
-                _context.SetParammeter("@Address", objPat.Address);
-                _context.SetParammeter("@Phone", objPat.Phone);
-                _context.SetParammeter("@Birthday", objPat.BirthDay);
-                _context.SetParammeter("@Id", objPat.IdPerson);
+                _context.SetParameter("@Name", objPat.Name);
+                _context.SetParameter("@Lastname", objPat.Lastname);
+                _context.SetParameter("@Dni", objPat.Dni);
+                _context.SetParameter("@Address", objPat.Address);
+                _context.SetParameter("@Phone", objPat.Phone);
+                _context.SetParameter("@Birthday", objPat.BirthDay);
+                _context.SetParameter("@Id", objPat.IdPerson);
 
                 if (_context.ExecAction())
                 {
                     _context.Close();
+                    _context.ClearParameters();
                     _context.SetQuery("UPDATE Patients SET HealthInsuranceId = @HealthInsurance, HealthInsuranceNumber = @HealthInsuranceNumber WHERE Id = @IdPatient");
-                    _context.SetParammeter("@HealthInsurance", objPat.HealthInsurance.Id);
-                    _context.SetParammeter("@HealthInsuranceNumber", objPat.HealthInsuranceNumber);
-                    _context.SetParammeter("@IdPatient", objPat.IdPatient);
+                    _context.SetParameter("@HealthInsurance", objPat.HealthInsurance.Id);
+                    _context.SetParameter("@HealthInsuranceNumber", objPat.HealthInsuranceNumber);
+                    _context.SetParameter("@IdPatient", objPat.IdPatient);
                     if (_context.ExecAction())
                     {
                         _context.Close();
@@ -139,13 +143,13 @@ namespace Business
             try
             {
                 _context.SetQuery("DELETE FROM Patients WHERE Id = @IdPatient");
-                _context.SetParammeter("@IdPatient", objPat.IdPatient);
+                _context.SetParameter("@IdPatient", objPat.IdPatient);
 
                 if (_context.ExecAction())
                 {
                     _context.Close();
                     _context.SetQuery("DELETE FROM Persons WHERE Id = @IdPerson");
-                    _context.SetParammeter("@IdPerson", objPat.IdPerson);
+                    _context.SetParameter("@IdPerson", objPat.IdPerson);
                     if (_context.ExecAction())
                     {
                         _context.Close();

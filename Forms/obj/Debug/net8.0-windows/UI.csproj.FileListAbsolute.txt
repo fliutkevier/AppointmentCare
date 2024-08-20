@@ -3,7 +3,6 @@ C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\UI.
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\UI.runtimeconfig.json
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\UI.dll
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\UI.pdb
-C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\obj\Debug\net8.0-windows\Forms.mainForm.resources
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\obj\Debug\net8.0-windows\UI.csproj.GenerateResource.cache
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\obj\Debug\net8.0-windows\UI.GeneratedMSBuildEditorConfig.editorconfig
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\obj\Debug\net8.0-windows\UI.AssemblyInfoInputs.cache
@@ -14,7 +13,6 @@ C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\obj\Debug\net8.0-windows\ref
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\obj\Debug\net8.0-windows\UI.pdb
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\obj\Debug\net8.0-windows\UI.genruntimeconfig.cache
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\obj\Debug\net8.0-windows\ref\UI.dll
-C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\obj\Debug\net8.0-windows\UI.adminFrm.resources
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\Azure.Core.dll
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\Azure.Identity.dll
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
@@ -150,4 +148,7 @@ C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\obj\Debug\net8.0-windows\UI.
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\obj\Debug\net8.0-windows\UI.frmDoctorAddAndMod.resources
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\obj\Debug\net8.0-windows\UI.frmPatientAddAndMod.resources
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\obj\Debug\net8.0-windows\UI.frmAppointmentsMain.resources
-C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\obj\Debug\net8.0-windows\UI.frmAddAvailableAppointment.resources
+C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\obj\Debug\net8.0-windows\UI.frmAddAppointment.resources
+C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\obj\Debug\net8.0-windows\UI.frmAdmin.resources
+C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\obj\Debug\net8.0-windows\Forms.frmMain.resources
+C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\obj\Debug\net8.0-windows\UI.frmDoctorLogin.resources

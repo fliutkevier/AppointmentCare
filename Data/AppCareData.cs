@@ -79,9 +79,14 @@ namespace Data
             }
         }
 
-        public void SetParammeter(string parameter, object value)
+        public void SetParameter(string parameter, object value)
         {
             _command.Parameters.AddWithValue(parameter, value);
+        }
+
+        public void ClearParameters()
+        {
+            _command.Parameters.Clear();
         }
 
         public void Close()
