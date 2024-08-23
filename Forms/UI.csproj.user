@@ -13,6 +13,9 @@
     <Compile Update="frmDoctorAddAndMod.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmDoctorAppointments.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmDoctorLogin.cs">
       <SubType>Form</SubType>
     </Compile>

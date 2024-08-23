@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Business;
+using Domain;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +21,17 @@ namespace UI
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("El diablo");
+            DoctorService doctorService = new DoctorService();
+            int id;
+            if ((id = doctorService.getIdByLicense(tbxLicense.Text)) > 0)
+            {
+                frmDoctorAppointments frm = new frmDoctorAppointments(doctorService.GetById(id));
+                frm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("La licencia ingresada no es válida o no existe.", "Warning");
+            }
         }
     }
 }

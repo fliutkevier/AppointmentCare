@@ -153,5 +153,26 @@ namespace Business
             }
             finally { _context.Close(); }
         }
+
+        public bool Cancel(int idPatient)
+        {
+            try
+            {
+                _context.ClearParameters();
+                _context.SetQuery("UPDATE Appointments SET PatientId = 0 WHERE PatientId = @IdPat");
+                _context.SetParameter("@IdPat", idPatient);
+
+                if (_context.ExecAction())
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally { _context.Close(); }
+        }
     }
 }

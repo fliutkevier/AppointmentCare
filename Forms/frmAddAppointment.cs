@@ -72,9 +72,9 @@ namespace UI
                     Text = "Modificando Turno";
 
                     //SE CARGA TODO PARA COMPLETAR LA MODIFICACION
+                    cbxSpeciality.SelectedValue = doctors.First(doctor => doctor.License == appointmentToAssign.DoctorLicense).SpecialityType.Id;
                     cbxDoctors.SelectedValue = appointmentToAssign.DoctorId;
                     cbxPatient.SelectedValue = appointmentToAssign.PatientId;
-                    cbxSpeciality.SelectedValue = doctors.First(doctor => doctor.License == appointmentToAssign.DoctorLicense).SpecialityType.Id;
                     cbxTime.SelectedValue = appointmentToAssign.Schedule.TimeOfDay;
                     loadDatesAndTimes();
                     mcAppointmentDate.SelectionStart = appointmentToAssign.Schedule.Date;

@@ -23,6 +23,7 @@ namespace UI
         {
             PersonService personService = new PersonService();
             DoctorService doctorService = new DoctorService();
+            PatientService patientService = new PatientService();
             AppointmentService appointmentService = new AppointmentService();
 
             var appointmentsList = appointmentService.GetAll();
@@ -37,10 +38,10 @@ namespace UI
 
                 if (appointment.PatientId > 0)
                 {
-                    Person patientPerson = personService.GetById(appointment.PatientId);
-                    appointment.PatientName = patientPerson.Name;
-                    appointment.PatientLastname = patientPerson.Lastname;
-                    appointment.PatientDni = patientPerson.Dni;
+                    Patient patient = patientService.GetById(appointment.PatientId);
+                    appointment.PatientName = patient.Name;
+                    appointment.PatientLastname = patient.Lastname;
+                    appointment.PatientDni = patient.Dni;
                 }
             }
 

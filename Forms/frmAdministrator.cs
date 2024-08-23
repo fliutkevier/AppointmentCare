@@ -26,6 +26,7 @@ namespace UI
             dgvPatients.DataSource = patService.getAllPatients();
             dgvPatients.Columns["IdPatient"].Visible = false;
             dgvPatients.Columns["IdPerson"].Visible = false;
+            dgvPatients.Columns["FullName"].Visible = false;
             dgvPatients.Columns["HealthInsurance"].DisplayIndex = 5;
             dgvPatients.Columns["HealthInsuranceNumber"].DisplayIndex = 5;
         }
@@ -36,6 +37,7 @@ namespace UI
             dgvDoctors.DataSource = doctorService.GetAll();
             dgvDoctors.Columns["IdPerson"].Visible = false;
             dgvDoctors.Columns["IdDoctor"].Visible = false;
+            dgvDoctors.Columns["FullName"].Visible = false;
             dgvDoctors.Columns["License"].DisplayIndex = 5;
             dgvDoctors.Columns["SpecialityType"].DisplayIndex = 5;
         }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,7 @@ namespace Business
 {
     public class PatientService : mainService
     {
+        List<Patient> _list;
 		public PatientService() : base() { }
 
 		public List<Patient> getAllPatients()
@@ -152,6 +154,8 @@ namespace Business
                     _context.SetParameter("@IdPerson", objPat.IdPerson);
                     if (_context.ExecAction())
                     {
+                        AppointmentService appointmentService = new AppointmentService();
+                        appointmentService.Cancel(objPat.IdPatient);
                         _context.Close();
                         return true;
                     }
@@ -164,6 +168,12 @@ namespace Business
                 throw;
             }
             finally { _context.Close(); }
+        }
+
+        public Patient GetById(int id)
+        {
+            _list = getAllPatients();
+            return _list.First(patient => patient.IdPatient == id);
         }
     }
 }
