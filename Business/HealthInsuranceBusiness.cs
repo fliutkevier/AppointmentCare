@@ -8,11 +8,11 @@ using Domain;
 
 namespace Business
 {
-    public class HealthInsuranceService : mainService
+    public class HealthInsuranceBusiness : mainBusiness
     {
-        public HealthInsuranceService() : base() { }
+        public HealthInsuranceBusiness() : base() { }
 
-        public List<HealthInsurance> getAllInsurances()
+        public List<HealthInsurance> GetAll()
         {
             List<HealthInsurance> insurances = new List<HealthInsurance>();
             

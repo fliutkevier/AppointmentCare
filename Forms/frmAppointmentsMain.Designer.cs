@@ -33,7 +33,7 @@
             label1 = new Label();
             btnAssignateAppointment = new Button();
             btnChangeAppointment = new Button();
-            btnDeleteAppointment = new Button();
+            btnCancelAppointment = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvAppointments).BeginInit();
             SuspendLayout();
             // 
@@ -87,21 +87,22 @@
             btnChangeAppointment.UseVisualStyleBackColor = true;
             btnChangeAppointment.Click += btnChangeAppointment_Click;
             // 
-            // btnDeleteAppointment
+            // btnCancelAppointment
             // 
-            btnDeleteAppointment.Location = new Point(445, 509);
-            btnDeleteAppointment.Name = "btnDeleteAppointment";
-            btnDeleteAppointment.Size = new Size(172, 38);
-            btnDeleteAppointment.TabIndex = 5;
-            btnDeleteAppointment.Text = "Eliminar Turno";
-            btnDeleteAppointment.UseVisualStyleBackColor = true;
+            btnCancelAppointment.Location = new Point(445, 509);
+            btnCancelAppointment.Name = "btnCancelAppointment";
+            btnCancelAppointment.Size = new Size(172, 38);
+            btnCancelAppointment.TabIndex = 5;
+            btnCancelAppointment.Text = "Cancelar Turno";
+            btnCancelAppointment.UseVisualStyleBackColor = true;
+            btnCancelAppointment.Click += btnCancelAppointment_Click_1;
             // 
             // frmAppointmentsMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(858, 606);
-            Controls.Add(btnDeleteAppointment);
+            Controls.Add(btnCancelAppointment);
             Controls.Add(btnChangeAppointment);
             Controls.Add(btnAssignateAppointment);
             Controls.Add(label1);
@@ -123,6 +124,6 @@
         private Label label1;
         private Button btnAssignateAppointment;
         private Button btnChangeAppointment;
-        private Button btnDeleteAppointment;
+        private Button btnCancelAppointment;
     }
 }

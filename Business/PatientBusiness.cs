@@ -6,38 +6,40 @@ using System.Text;
 using System.Threading.Tasks;
 using Data;
 using Domain;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Business
 {
-    public class PatientService : mainService
+    public class PatientBusiness : mainBusiness
     {
         List<Patient> _list;
-		public PatientService() : base() { }
+		public PatientBusiness() : base() { }
 
-		public List<Patient> getAllPatients()
+		public List<Patient> GetAll()
         {
 			List<Patient> patients = new List<Patient>();
 			try
 			{
-				_context.SetQuery("SELECT Per.Id, Pat.Id AS IdPatient, Name, Lastname, DNI, H.Id AS ProviderId, H.Provider AS Provider, Pat.HealthInsuranceNumber, Address, Phone, Birthday FROM Persons Per, Patients Pat, HealthInsurances H WHERE Per.Id = Pat.PersonId AND Pat.HealthInsuranceId = H.Id");
+				_context.SetQuery("SELECT per.Id AS IdPerson, per.Name, per.Lastname, per.DNI, per.Address, per.Phone, per.Birthday, per.IsActive, pat.Id AS IdPatient, pat.HealthInsuranceNumber, h.Id AS IdProvider, h.Provider FROM Persons per INNER JOIN Patients pat ON pat.PersonId = per.Id INNER JOIN HealthInsurances h ON h.Id = pat.HealthInsuranceId");
 				_context.ExecRead();
 
 				while (_context.Reader.Read())
 				{
                     Patient patient = new Patient();
-                    patient.IdPerson = (int)_context.Reader["Id"];
+                    patient.IdPerson = (int)_context.Reader["IdPerson"];
                     patient.IdPatient = (int)_context.Reader["IdPatient"];
 					patient.Name = (string)_context.Reader["Name"];
 					patient.Lastname = (string)_context.Reader["Lastname"];
 					patient.Dni = (string)_context.Reader["DNI"];
 					patient.HealthInsurance = new HealthInsurance();
-					patient.HealthInsurance.Id = (int)_context.Reader["ProviderId"];
+					patient.HealthInsurance.Id = (int)_context.Reader["IdProvider"];
                     patient.HealthInsurance.Provider = (string)_context.Reader["Provider"];
 					patient.HealthInsuranceNumber = (string)_context.Reader["HealthInsuranceNumber"];
 					patient.Address = (string)_context.Reader["Address"];
 					patient.Phone = (string)_context.Reader["Phone"];
 					DateTime dtHelp = (DateTime)_context.Reader["Birthday"];
                     patient.BirthDay = DateOnly.FromDateTime(dtHelp);
+                    patient.IsActive = (bool)_context.Reader["IsActive"];
 
 					patients.Add(patient);
                 }
@@ -59,17 +61,18 @@ namespace Business
 			try
 			{
                 _context.ClearParameters();
-                _context.SetQuery("INSERT INTO Persons VALUES (@Name, @Lastname, @Dni, @Address, @Phone, @Birthday)");
+                _context.SetQuery("INSERT INTO Persons VALUES (@Name, @Lastname, @Dni, @Address, @Phone, @Birthday, @IsActive)");
                 _context.SetParameter("@Name", objPat.Name);
                 _context.SetParameter("@Lastname", objPat.Lastname);
                 _context.SetParameter("@Dni", objPat.Dni);
                 _context.SetParameter("@Address", objPat.Address);
                 _context.SetParameter("@Phone", objPat.Phone);
                 _context.SetParameter("@Birthday", objPat.BirthDay);
+                _context.SetParameter("@IsActive", objPat.IsActive);
 
 				if(_context.ExecAction())
 				{
-					PersonService perServ = new PersonService();
+					PersonBusiness perServ = new PersonBusiness();
 					objPat.IdPerson = perServ.GetIdByDni(objPat.Dni);
 					_context.Close();
 					if(objPat.IdPerson == -1)
@@ -101,12 +104,12 @@ namespace Business
 			
 		}
 		
-		public bool ModifyPatient(Patient objPat)
+		public bool Modify(Patient objPat)
 		{
 			try
 			{
                 _context.ClearParameters();
-                _context.SetQuery("UPDATE Persons SET Name = @Name, Lastname = @Lastname, DNI = @Dni, Address = @Address, Phone = @Phone, Birthday = @Birthday WHERE Id = @Id");
+                _context.SetQuery("UPDATE Persons SET Name = @Name, Lastname = @Lastname, DNI = @Dni, Address = @Address, Phone = @Phone, Birthday = @Birthday, IsActive = @IsActive WHERE Id = @Id");
                 _context.SetParameter("@Name", objPat.Name);
                 _context.SetParameter("@Lastname", objPat.Lastname);
                 _context.SetParameter("@Dni", objPat.Dni);
@@ -114,6 +117,7 @@ namespace Business
                 _context.SetParameter("@Phone", objPat.Phone);
                 _context.SetParameter("@Birthday", objPat.BirthDay);
                 _context.SetParameter("@Id", objPat.IdPerson);
+                _context.SetParameter("@IsActive", objPat.IsActive);
 
                 if (_context.ExecAction())
                 {
@@ -140,7 +144,30 @@ namespace Business
 			finally { _context.Close(); }
 		}
 
-		public bool Delete(Patient objPat)
+        public bool SoftDelete(Patient objPat)
+        {
+            try
+            {
+                _context.ClearParameters();
+                _context.SetQuery("UPDATE Persons IsActive = 0 WHERE Id = @Id");
+                _context.SetParameter("@Id", objPat.IdPerson);
+
+                if (_context.ExecAction())
+                {
+                    _context.Close();
+                    return true;
+                }
+
+                return false;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally { _context.Close(); }
+        }
+
+		public bool Remove(Patient objPat)
 		{
             try
             {
@@ -154,7 +181,7 @@ namespace Business
                     _context.SetParameter("@IdPerson", objPat.IdPerson);
                     if (_context.ExecAction())
                     {
-                        AppointmentService appointmentService = new AppointmentService();
+                        AppointmentBusiness appointmentService = new AppointmentBusiness();
                         appointmentService.Cancel(objPat.IdPatient);
                         _context.Close();
                         return true;
@@ -172,7 +199,7 @@ namespace Business
 
         public Patient GetById(int id)
         {
-            _list = getAllPatients();
+            _list = GetAll();
             return _list.First(patient => patient.IdPatient == id);
         }
     }

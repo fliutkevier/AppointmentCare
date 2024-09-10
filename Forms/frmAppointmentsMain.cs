@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Domain;
+using Service;
 
 namespace UI
 {
@@ -21,10 +22,10 @@ namespace UI
 
         private void loadAppointments()
         {
-            PersonService personService = new PersonService();
-            DoctorService doctorService = new DoctorService();
-            PatientService patientService = new PatientService();
-            AppointmentService appointmentService = new AppointmentService();
+            PersonBusiness personService = new PersonBusiness();
+            DoctorBusiness doctorService = new DoctorBusiness();
+            PatientBusiness patientService = new PatientBusiness();
+            AppointmentBusiness appointmentService = new AppointmentBusiness();
 
             var appointmentsList = appointmentService.GetAll();
             foreach (var appointment in appointmentsList)
@@ -49,6 +50,7 @@ namespace UI
             dgvAppointments.Columns["Id"].Visible = false;
             dgvAppointments.Columns["DoctorId"].Visible = false;
             dgvAppointments.Columns["PatientId"].Visible = false;
+
         }
 
         private void frmAppointmentsMain_Load(object sender, EventArgs e)
@@ -76,6 +78,22 @@ namespace UI
             var appointment = (Appointment)dgvAppointments.CurrentRow.DataBoundItem;
             frmAddAppointment frm = new frmAddAppointment(appointment);
             frm.ShowDialog();
+            loadAppointments();
+        }
+
+
+        private void btnCancelAppointment_Click_1(object sender, EventArgs e)
+        {
+            Appointment appointment = (Appointment)dgvAppointments.CurrentRow.DataBoundItem;
+            if (AppointmentService.Cancel(appointment.PatientId))
+            {
+                MessageBox.Show("Turno cancelado, puede asignarle un nuevo paciente.", "EXITO");
+            }
+            else
+            {
+                MessageBox.Show("El turno no pudo ser cancelado.", "Warning");
+            }
+
             loadAppointments();
         }
     }

@@ -1,5 +1,6 @@
 ﻿using Business;
 using Domain;
+using Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,10 +23,9 @@ namespace UI
         }
         private void frmDoctorAddAndMod_Load(object sender, EventArgs e)
         {
-            SpecialityService specialityService = new SpecialityService();
             try
             {
-                cbxSpeciality.DataSource = specialityService.getAll();
+                cbxSpeciality.DataSource = SpecialityService.GetAll();
                 cbxSpeciality.ValueMember = "Id";
                 cbxSpeciality.DisplayMember = "Description";
                 if (doctor.IdPerson > 0)
@@ -57,11 +57,9 @@ namespace UI
             doctor.SpecialityType = (Speciality)cbxSpeciality.SelectedItem;
             doctor.License = tbxLicense.Text;
 
-            DoctorService doctorService = new DoctorService();
-
             if (doctor.IdDoctor > 0)
             {
-                if (doctorService.Modify(doctor))
+                if (DoctorService.Modify(doctor))
                 {
                     MessageBox.Show("Doctor modificado.", "Estado.", MessageBoxButtons.OK);
                     Close();
@@ -73,7 +71,7 @@ namespace UI
             }
             else
             {
-                if (doctorService.Add(doctor))
+                if (DoctorService.Add(doctor))
                 {
                     MessageBox.Show("Doctor agregado.", "Estado.", MessageBoxButtons.OK);
                     Close();

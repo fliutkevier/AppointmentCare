@@ -9,9 +9,9 @@ using Domain;
 
 namespace Business
 {
-    public class DoctorService : mainService
+    public class DoctorBusiness : mainBusiness
     {
-        public DoctorService() : base() { }
+        public DoctorBusiness() : base() { }
 
         public List<Doctor> GetAll()
         {
@@ -19,13 +19,13 @@ namespace Business
             
             try
             {
-                _context.SetQuery("SELECT Per.Id, Doc.Id AS IdDoctor, Per.Name, Per.Lastname, Per.DNI, Per.Address, Per.Phone, Per.Birthday, License, Spec.Id AS SpecialityId, Spec.Description AS Speciality FROM DOCTORS Doc, Persons Per, Speciality Spec WHERE Doc.PersonId = Per.Id AND Doc.SpecialityId = Spec.Id");
+                _context.SetQuery("SELECT p.Id AS IdPerson, p.IsActive, p.Name, p.Lastname, p.DNI, p.Address, p.Phone, p.Birthday, d.Id AS IdDoctor, d.License, d.SpecialityId, s.Description AS Speciality FROM Persons p INNER JOIN Doctors d ON d.PersonId = p.Id INNER JOIN Specialties s ON d.SpecialityId = s.Id");
                 _context.ExecRead();
 
                 while (_context.Reader.Read())
                 {
                     Doctor doctor = new Doctor();
-                    doctor.IdPerson = (int)_context.Reader["Id"];
+                    doctor.IdPerson = (int)_context.Reader["IdPerson"];
                     doctor.IdDoctor = (int)_context.Reader["IdDoctor"];
                     doctor.Name = (string)_context.Reader["Name"];
                     doctor.Lastname = (string)_context.Reader["Lastname"];
@@ -38,6 +38,7 @@ namespace Business
                     doctor.SpecialityType = new Speciality();
                     doctor.SpecialityType.Id = (int)_context.Reader["SpecialityId"];
                     doctor.SpecialityType.Description = (string)_context.Reader["Speciality"];
+                    doctor.IsActive = (bool)_context.Reader["IsActive"];
 
                     lstDoctors.Add(doctor);
                 }
@@ -59,17 +60,18 @@ namespace Business
         {
             try
             {
-                _context.SetQuery("INSERT INTO Persons VALUES (@Name, @Lastname, @Dni, @Address, @Phone, @Birthday)");
+                _context.SetQuery("INSERT INTO Persons VALUES (@Name, @Lastname, @Dni, @Address, @Phone, @Birthday, @IsActive)");
                 _context.SetParameter("@Name", doc.Name);
                 _context.SetParameter("@Lastname", doc.Lastname);
                 _context.SetParameter("@Dni", doc.Dni);
                 _context.SetParameter("@Address", doc.Address);
                 _context.SetParameter("@Phone", doc.Phone);
                 _context.SetParameter("@Birthday", doc.BirthDay);
+                _context.SetParameter("@IsActive", true);
 
                 if (_context.ExecAction())
                 {
-                    PersonService perServ = new PersonService();
+                    PersonBusiness perServ = new PersonBusiness();
                     doc.IdPerson = perServ.GetIdByDni(doc.Dni);
                     _context.Close();
                     if (doc.IdPerson <= 0)
@@ -104,7 +106,8 @@ namespace Business
         {
             try
             {
-                _context.SetQuery("UPDATE Persons SET Name = @Name, Lastname = @Lastname, DNI = @Dni, Address = @Address, Phone = @Phone, Birthday = @Birthday WHERE Id = @Id");
+                _context.ClearParameters();
+                _context.SetQuery("UPDATE Persons SET Name = @Name, Lastname = @Lastname, DNI = @Dni, Address = @Address, Phone = @Phone, Birthday = @Birthday, IsActive = @IsActive WHERE Id = @Id");
                 _context.SetParameter("@Name", doc.Name);
                 _context.SetParameter("@Lastname", doc.Lastname);
                 _context.SetParameter("@Dni", doc.Dni);
@@ -112,10 +115,12 @@ namespace Business
                 _context.SetParameter("@Phone", doc.Phone);
                 _context.SetParameter("@Birthday", doc.BirthDay);
                 _context.SetParameter("@Id", doc.IdPerson);
+                _context.SetParameter("@IsActive", doc.IsActive);
 
                 if (_context.ExecAction())
                 {
                     _context.Close();
+                    _context.ClearParameters();
                     _context.SetQuery("UPDATE Doctors SET License = @License, SpecialityId = @SpecialityId WHERE Id = @IdDoctor");
                     _context.SetParameter("@License", doc.License);
                     _context.SetParameter("@SpecialityId", doc.SpecialityType.Id);
@@ -137,21 +142,46 @@ namespace Business
             finally { _context.Close(); }
         }
 
-        public bool Delete(Doctor doc)
+        public bool SoftDelete(int id)
         {
             try
             {
-                _context.SetQuery("DELETE FROM Doctors WHERE Id = @IdDoctor");
-                _context.SetParameter("@IdDoctor", doc.IdDoctor);
+                _context.ClearParameters();
+                _context.SetQuery("UPDATE Persons SET IsActive = 0 WHERE Id = @Id");
+                _context.SetParameter("@Id", id);
 
                 if (_context.ExecAction())
                 {
                     _context.Close();
-                    _context.SetQuery("DELETE FROM Persons WHERE Id = @IdPerson");
-                    _context.SetParameter("@IdPerson", doc.IdPerson);
+                    return true;
+                }
+
+                return false;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally { _context.Close(); }
+        }
+
+        public bool Remove(Doctor doc)
+        {
+            try
+            {
+                _context.ClearParameters();
+                _context.SetQuery("DELETE FROM Doctors WHERE Id = @Id");
+                _context.SetParameter("@Id", doc.IdDoctor);
+
+                if (_context.ExecAction())
+                {
+                    _context.Close();
+                    _context.ClearParameters();
+                    _context.SetQuery("DELETE FROM Persons WHERE Id = @Id");
+                    _context.SetParameter("@Id", doc.IdPerson);
+
                     if (_context.ExecAction())
                     {
-                        
                         _context.Close();
                         return true;
                     }
@@ -255,14 +285,22 @@ namespace Business
             try
             {
                 _context.ClearParameters();
-                _context.SetQuery("SELECT Id, PersonId, License, SpecialityId FROM Doctors WHERE Id = @IdPro");
-                _context.SetParameter("@IdPro", id);
+                _context.SetQuery("SELECT p.Id AS PersonId, d.Id AS DoctorId, Name, Lastname, DNI, Address, Phone, Birthday, IsActive, License, SpecialityId FROM Persons p INNER JOIN Doctors d ON p.Id = d.PersonId WHERE d.Id = @Id");
+                _context.SetParameter("@Id", id);
                 _context.ExecRead();
 
                 if (_context.Reader.Read())
                 {
-                    doctor.IdDoctor = (int)_context.Reader["Id"];
                     doctor.IdPerson = (int)_context.Reader["PersonId"];
+                    doctor.IdDoctor = (int)_context.Reader["DoctorId"];
+                    doctor.Name = (string)_context.Reader["Name"];
+                    doctor.Lastname = (string)_context.Reader["Lastname"];
+                    doctor.Dni = (string)_context.Reader["DNI"];
+                    doctor.Address = (string)_context.Reader["Address"];
+                    doctor.Phone = (string)_context.Reader["Phone"];
+                    DateTime dtHelp = (DateTime)_context.Reader["Birthday"];
+                    doctor.BirthDay = DateOnly.FromDateTime(dtHelp);
+                    doctor.IsActive = (bool)_context.Reader["IsActive"];
                     doctor.License = (string)_context.Reader["License"];
                     doctor.SpecialityType = new Speciality();
                     doctor.SpecialityType.Id = (int)_context.Reader["SpecialityId"];

@@ -9,7 +9,9 @@
       "UI/1.0.0": {
         "dependencies": {
           "Business": "1.0.0",
-          "Microsoft.EntityFrameworkCore.Design": "8.0.7"
+          "Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore.Design": "8.0.7",
+          "Service": "1.0.0"
         },
         "runtime": {
           "UI.dll": {}
@@ -921,6 +923,17 @@
             "fileVersion": "1.0.0.0"
           }
         }
+      },
+      "Service/1.0.0": {
+        "dependencies": {
+          "Business": "1.0.0"
+        },
+        "runtime": {
+          "Service.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -1431,6 +1444,11 @@
       "sha512": ""
     },
     "Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Service/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

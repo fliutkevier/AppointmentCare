@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Business;
 using Domain;
+using Service;
 
 namespace UI
 {
@@ -20,24 +20,24 @@ namespace UI
             InitializeComponent();
         }
 
-        public void loadPatients()
+        private void loadPatients()
         {
-            PatientService patService = new PatientService();
-            dgvPatients.DataSource = patService.getAllPatients();
+            dgvPatients.DataSource = PatientService.GetAllActives();
             dgvPatients.Columns["IdPatient"].Visible = false;
             dgvPatients.Columns["IdPerson"].Visible = false;
             dgvPatients.Columns["FullName"].Visible = false;
+            dgvPatients.Columns["IsActive"].Visible = false;
             dgvPatients.Columns["HealthInsurance"].DisplayIndex = 5;
             dgvPatients.Columns["HealthInsuranceNumber"].DisplayIndex = 5;
         }
 
-        public void loadDoctors()
+        private void loadDoctors()
         {
-            DoctorService doctorService = new DoctorService();
-            dgvDoctors.DataSource = doctorService.GetAll();
+            dgvDoctors.DataSource = DoctorService.GetAllActives();
             dgvDoctors.Columns["IdPerson"].Visible = false;
             dgvDoctors.Columns["IdDoctor"].Visible = false;
             dgvDoctors.Columns["FullName"].Visible = false;
+            dgvDoctors.Columns["IsActive"].Visible = false;
             dgvDoctors.Columns["License"].DisplayIndex = 5;
             dgvDoctors.Columns["SpecialityType"].DisplayIndex = 5;
         }
@@ -67,11 +67,10 @@ namespace UI
         private void btnDeletePatient_Click(object sender, EventArgs e)
         {
             patient = (Patient)dgvPatients.CurrentRow.DataBoundItem;
-            PatientService patientService = new PatientService();
             DialogResult yesOrNo = MessageBox.Show("¿Está seguro que desea eliminar este paciente?", "ELIMINACIÓN...", MessageBoxButtons.YesNo);
             if (yesOrNo == DialogResult.Yes)
             {
-                if (patientService.Delete(patient))
+                if (PersonService.SoftDelete(patient.IdPerson))
                 {
                     MessageBox.Show("Paciente eliminado.");
                     loadPatients();
@@ -102,13 +101,12 @@ namespace UI
         private void btnDeleteDoctor_Click(object sender, EventArgs e)
         {
             Doctor doctor = (Doctor)dgvDoctors.CurrentRow.DataBoundItem;
-            DoctorService doctorService = new DoctorService();
             DialogResult yesOrNo = MessageBox.Show("¿Está seguro que desea eliminar este doctor?", "ELIMINACIÓN...", MessageBoxButtons.YesNo);
             if (yesOrNo == DialogResult.Yes)
             {
                 try
                 {
-                    if (doctorService.Delete(doctor))
+                    if (DoctorService.SoftDelete(doctor.IdPerson))
                     {
                         MessageBox.Show("Doctor eliminado.");
                         loadDoctors();

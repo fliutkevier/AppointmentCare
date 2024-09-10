@@ -21,7 +21,7 @@ namespace UI
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            DoctorService doctorService = new DoctorService();
+            DoctorBusiness doctorService = new DoctorBusiness();
             int id;
             if ((id = doctorService.getIdByLicense(tbxLicense.Text)) > 0)
             {

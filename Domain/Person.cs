@@ -24,6 +24,7 @@ namespace Domain
         public string Phone { get; set; }
         [DisplayName("Fecha de Nacimiento")]
         public DateOnly BirthDay { get; set; }
+        public bool IsActive { get; set; }
         public string FullName
         {
             get { return $"{Name} {Lastname}"; }
@@ -38,6 +39,7 @@ namespace Domain
             Address = string.Empty;
             Phone = string.Empty;
             BirthDay = new DateOnly(1, 1, 1);
+            IsActive = true;
         }
     }
 }

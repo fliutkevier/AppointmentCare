@@ -9,9 +9,9 @@ using Microsoft.Identity.Client;
 
 namespace Business
 {
-    public class SpecialityService : mainService
+    public class SpecialityBusiness : mainBusiness
     {
-        public SpecialityService() : base() { }
+        public SpecialityBusiness() : base() { }
 
         public List<Speciality> getAll()
         {
@@ -19,7 +19,7 @@ namespace Business
 
             try
             {
-                _context.SetQuery("SELECT Id, Description FROM Speciality");
+                _context.SetQuery("SELECT Id, Description FROM Specialties");
                 _context.ExecRead();
 
                 while (_context.Reader.Read())

@@ -1,5 +1,6 @@
 ﻿using Business;
 using Domain;
+using Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +16,7 @@ namespace UI
     public partial class frmPatientAddAndMod : Form
     {
         private bool isModifying;
-        private Patient patient = null!;
+        private Patient patient;
         public frmPatientAddAndMod()
         {
             patient = new Patient();
@@ -36,17 +37,10 @@ namespace UI
 
         private void frmAdd_Load(object sender, EventArgs e)
         {
-            HealthInsuranceService hIServ = new HealthInsuranceService();
-            try
-            {
-                cbxHealthInsurance.DataSource = hIServ.getAllInsurances();
-                cbxHealthInsurance.ValueMember = "Id";
-                cbxHealthInsurance.DisplayMember = "Provider";
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            cbxHealthInsurance.DataSource = HealthInsuranceService.GetAll();
+            cbxHealthInsurance.ValueMember = "Id";
+            cbxHealthInsurance.DisplayMember = "Provider";
+
             if (patient.IdPerson > 0)
             {
                 lblTitle.Text = "Modificando";
@@ -70,11 +64,10 @@ namespace UI
                 MessageBox.Show("Dni invalido.", "ERROR", MessageBoxButtons.OK);
             }
 
-            if (patient.IdPerson <= 0)
+            if(patient.IdPerson <= 0)
             {
-                patient = new Patient();
+                Patient patient = new Patient();
             }
-
             patient.Name = tbxName.Text;
             patient.Lastname = tbxLastname.Text;
             patient.Dni = tbxDni.Text;
@@ -84,10 +77,9 @@ namespace UI
             patient.HealthInsurance = (HealthInsurance)cbxHealthInsurance.SelectedItem;
             patient.HealthInsuranceNumber = tbxHealthInsuranceNumber.Text;
 
-            PatientService patService = new PatientService();
             if (isModifying)
             {
-                if (patService.ModifyPatient(patient))
+                if (PatientService.Modify(patient))
                 {
                     MessageBox.Show("Paciente modificado con exito.");
                     Close();
@@ -97,7 +89,7 @@ namespace UI
                     MessageBox.Show("No se pudo modificar al paciente, revise bien los datos cargados.");
                 }
             }
-            else if (patService.addPatient(patient))
+            else if (PatientService.Add(patient))
             {
                 MessageBox.Show("Paciente cargado con exito.");
                 Close();

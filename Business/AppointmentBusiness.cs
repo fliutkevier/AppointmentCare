@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Business
 {
-    public class AppointmentService : mainService
+    public class AppointmentBusiness : mainBusiness
     {
-        public AppointmentService() : base() { }
+        public AppointmentBusiness() : base() { }
 
         public List<Appointment> GetAll()
         {
@@ -51,7 +51,7 @@ namespace Business
             {
                 _context.ClearParameters();
                 _context.SetQuery("SELECT Id, PatientId, Schedule FROM Appointments WHERE DoctorId = @Doctor");
-                _context.SetParameter("Doctor", idDoctor);
+                _context.SetParameter("@Doctor", idDoctor);
                 _context.ExecRead();
 
                 while(_context.Reader.Read())

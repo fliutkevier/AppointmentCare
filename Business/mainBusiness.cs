@@ -7,10 +7,10 @@ using Data;
 
 namespace Business
 {
-    public class mainService
+    public class mainBusiness
     {
         protected readonly AppCareData _context;
-        public mainService()
+        public mainBusiness()
         {
             _context = new AppCareData();
         }

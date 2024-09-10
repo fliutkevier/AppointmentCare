@@ -153,3 +153,5 @@ C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\obj\Debug\net8.0-windows\UI.
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\obj\Debug\net8.0-windows\Forms.frmMain.resources
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\obj\Debug\net8.0-windows\UI.frmDoctorLogin.resources
 C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\obj\Debug\net8.0-windows\UI.frmDoctorAppointments.resources
+C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\Service.dll
+C:\Programming\AsignaTurns2.0\AppointmentCare\Forms\bin\Debug\net8.0-windows\Service.pdb

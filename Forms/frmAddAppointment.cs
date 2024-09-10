@@ -21,8 +21,8 @@ namespace UI
         private List<Doctor> doctors;
         private List<Patient> patients;
         private List<Speciality> specialities;
-        private DoctorService doctorService;
-        private PatientService patientService;
+        private DoctorBusiness doctorService;
+        private PatientBusiness patientService;
         public frmAddAppointment()
         {
             appointmentToAssign = new Appointment();
@@ -38,13 +38,13 @@ namespace UI
 
         private void frmAddAvailableAppointment_Load(object sender, EventArgs e)
         {
-            SpecialityService specialityService = new SpecialityService();
-            PersonService personService = new PersonService();
-            patientService = new PatientService();
-            doctorService = new DoctorService();
+            SpecialityBusiness specialityService = new SpecialityBusiness();
+            PersonBusiness personService = new PersonBusiness();
+            patientService = new PatientBusiness();
+            doctorService = new DoctorBusiness();
             specialities = specialityService.getAll();
             doctors = doctorService.GetAll();
-            patients = patientService.getAllPatients();
+            patients = patientService.GetAll();
 
             mcAppointmentDate.MaxSelectionCount = 1;
 
@@ -113,7 +113,7 @@ namespace UI
 
         private void btnOk_Click(object sender, EventArgs e)
         {
-            AppointmentService appointmentService = new AppointmentService();
+            AppointmentBusiness appointmentService = new AppointmentBusiness();
             DateOnly date = DateOnly.FromDateTime(mcAppointmentDate.SelectionStart);
             TimeOnly hour = TimeOnly.ParseExact(cbxTime.Text, "HH:mm");
             appointmentToAssign.Schedule = new DateTime(date, hour);
@@ -189,7 +189,7 @@ namespace UI
 
         private void loadDatesAndTimes()
         {
-            AppointmentService appointmentService = new AppointmentService();
+            AppointmentBusiness appointmentService = new AppointmentBusiness();
             Doctor doctorSelected = (Doctor)cbxDoctors.SelectedItem;
             List<Appointment> appointmentsDoctor = appointmentService.GetByIdDoctor(doctorSelected.IdDoctor);
 

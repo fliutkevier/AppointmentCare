@@ -23,11 +23,11 @@ namespace UI
 
         private void frmDoctorAppointments_Load(object sender, EventArgs e)
         {
-            PersonService personService = new PersonService();
+            PersonBusiness personService = new PersonBusiness();
             Person doctorPerson = personService.GetById(doctor.IdPerson);
             Text += $"{doctorPerson.FullName}";
 
-            AppointmentService appointmentService = new AppointmentService();
+            AppointmentBusiness appointmentService = new AppointmentBusiness();
             var appointments = appointmentService.GetByIdDoctor(doctor.IdDoctor).Where(appointment => appointment.PatientId > 0).ToList();
 
             dgvAppointments.DataSource = appointments;

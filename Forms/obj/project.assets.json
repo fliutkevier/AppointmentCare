@@ -1467,6 +1467,19 @@
         "runtime": {
           "bin/placeholder/Domain.dll": {}
         }
+      },
+      "Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Business": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Service.dll": {}
+        }
       }
     }
   },
@@ -3901,12 +3914,19 @@
       "type": "project",
       "path": "../Domain/Domain.csproj",
       "msbuildProject": "../Domain/Domain.csproj"
+    },
+    "Service/1.0.0": {
+      "type": "project",
+      "path": "../Service/Service.csproj",
+      "msbuildProject": "../Service/Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
       "Business >= 1.0.0",
-      "Microsoft.EntityFrameworkCore.Design >= 8.0.7"
+      "Domain >= 1.0.0",
+      "Microsoft.EntityFrameworkCore.Design >= 8.0.7",
+      "Service >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -3944,6 +3964,12 @@
           "projectReferences": {
             "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Business\\Business.csproj": {
               "projectPath": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Business\\Business.csproj"
+            },
+            "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Domain\\Domain.csproj"
+            },
+            "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Service\\Service.csproj": {
+              "projectPath": "C:\\Programming\\AsignaTurns2.0\\AppointmentCare\\Service\\Service.csproj"
             }
           }
         }
